@@ -1,0 +1,28 @@
+package dad.puzzlegames.views;
+
+import dad.puzzlegames.controllers.PuzzleGamesController;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class PuzzleGamesApp extends Application {
+
+	private PuzzleGamesController controladorPrincipal;
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		controladorPrincipal = new PuzzleGamesController();
+		Scene scene = new Scene(controladorPrincipal.getVista(), 720, 720);
+
+		primaryStage.setTitle("PuzzleGames");
+		primaryStage.setScene(scene);
+		primaryStage.show();
+
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+
+	}
+
+}

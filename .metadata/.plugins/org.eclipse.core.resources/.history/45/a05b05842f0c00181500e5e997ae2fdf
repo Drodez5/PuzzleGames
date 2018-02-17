@@ -1,0 +1,13 @@
+package dad.puzzlegames.controllers;
+
+public class PuzzleGamesController {
+	
+		public PuzzleGamesController() {
+		
+		
+			}
+		
+		
+		
+
+}

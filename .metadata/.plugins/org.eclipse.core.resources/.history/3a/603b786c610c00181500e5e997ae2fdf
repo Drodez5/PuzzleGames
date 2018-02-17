@@ -1,0 +1,104 @@
+package dad.puzzlegames.controllers;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+
+public class PuzzlePiecesController implements Initializable {
+	
+	@FXML
+    private BorderPane vista;
+
+    @FXML
+    private Label tituloPartidaLabel;
+
+    @FXML
+    private Label nombreLabel;
+
+    @FXML
+    private Label tiempoLabel;
+
+    @FXML
+    private Label rondaLabel;
+
+    @FXML
+    private ImageView imagen1Tab;
+
+    @FXML
+    private ImageView imagen2Tab;
+
+    @FXML
+    private ImageView imagen3Tab;
+
+    @FXML
+    private ImageView imagen4Tab;
+
+    @FXML
+    private ImageView imagen5Tab;
+
+    @FXML
+    private ImageView imagen6Tab;
+
+    @FXML
+    private ImageView imagen7Tab;
+
+    @FXML
+    private ImageView imagen8Tab;
+
+    @FXML
+    private ImageView imagen9Tab;
+
+    @FXML
+    private ImageView imagen1Ficha;
+
+    @FXML
+    private ImageView imagen2Ficha;
+
+    @FXML
+    private ImageView imagen3Ficha;
+
+    @FXML
+    private ImageView imagen4Ficha;
+
+    @FXML
+    private ImageView imagen5Ficha;
+
+    @FXML
+    private ImageView imagen6Ficha;
+
+    @FXML
+    private ImageView imagen7Ficha;
+
+    @FXML
+    private ImageView imagen8Ficha;
+
+    @FXML
+    private ImageView imagen9Ficha;
+
+	
+	
+
+	public PuzzlePiecesController() throws IOException {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/dad/puzzlegames/views/PuzzlePiecesFacilView.fxml"));
+		loader.setController(this);
+		loader.load();
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+
+	}
+	
+
+
+	
+	
+}

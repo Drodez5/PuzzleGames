@@ -1,0 +1,15 @@
+package dad.puzzlegames.controllers;
+
+import java.io.IOException;
+
+public class PuzzleGamesController {
+
+	private MenuController controladorMenu;
+
+	public PuzzleGamesController() throws IOException {
+
+		controladorMenu = new MenuController();
+
+	}
+
+}
