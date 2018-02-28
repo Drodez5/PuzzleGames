@@ -1,0 +1,62 @@
+.root{
+	-fx-background-color: linear-gradient(to bottom, #833ab4 ,#fd1d1d,#fcb045);
+}
+
+#subTituloOpciones{
+	-fx-font-family: 'Impact';
+	-fx-font-size: 20pt;
+	-fx-text-fill:white;
+	-fx-effect: dropshadow(gaussian,black,2,2,2,2) ;
+	
+}
+
+#tituloLabel,#tituloOpciones,#tituloEntrada {
+	-fx-font-family: 'Impact';
+	-fx-font-size: 50pt;
+	-fx-text-fill:white;
+	-fx-effect: dropshadow(gaussian,black,3,3,3,3) ;
+}
+#tituloPartida{
+	-fx-font-family: 'Impact';
+	-fx-font-size: 30pt;
+	-fx-text-fill:white;
+	-fx-effect: dropshadow(gaussian,black,3,3,3,3) ;
+}
+#tableroPP, #tableroPiezas{
+	-fx-background-color:whitesmoke ;
+	-fx-border-color: black;
+	-fx-border-radius: 10px;
+}
+#tituloPiezas{
+	-fx-font-family: 'Impact';
+	-fx-font-size: 30pt;
+	-fx-text-fill:white;
+	-fx-effect: dropshadow(gaussian,black,3,3,3,3) ;
+}
+
+
+.button {
+	-fx-background-color: white ;
+	-fx-text-fill:black;
+	-fx-font-weight: bold;
+	-fx-border-color: black;
+	-fx-border-width: 2px;
+	-fx-border-radius: 10px;
+}
+.button:hover {
+	-fx-background-color: lightblue;
+	-fx-text-fill:black;
+	
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color: gray ;
+}
+
+
+
+.label{
+	-fx-font-weight: bold;
+	-fx-text-fill:white;
+	-fx-effect: dropshadow(gaussian,black,1,1,1,1) ;
+}

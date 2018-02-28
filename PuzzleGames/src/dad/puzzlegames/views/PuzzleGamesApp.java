@@ -20,6 +20,7 @@ public class PuzzleGamesApp extends Application {
 
 		primaryStage.setTitle("PuzzleGames");
 		primaryStage.setScene(scene);
+		primaryStage.getScene().getStylesheets().add(getClass().getResource("/dad/puzzlegames/resources/Animado.css").toExternalForm());
 		primaryStage.getIcons().add(new Image("/dad/puzzlegames/resources/icon.png"));
 		primaryStage.show();
 

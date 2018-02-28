@@ -1,14 +1,14 @@
 AbstractTextEditor.Color.Background=28,31,34
 SQLCommentColor=199,221,12
-SQLKeywordColor=141,203,226
+SQLKeywordColor=255,255,255
 SQLOperatorColor=216,216,216
 SQLStringColor=255,198,0
 SQLTextColor=216,216,216
 cfcommentBackgroundColor=28,31,34
 cfcommentColor=199,221,12
-cfkeywordColor=141,203,226
+cfkeywordColor=255,255,255
 cfnumberColor=127,179,71
-cfscriptKeywordColor=141,203,226
+cfscriptKeywordColor=255,255,255
 cfscriptStringColor=255,198,0
 cfscriptTextColor=216,216,216
 cfscriptfunctionColor=255,255,255

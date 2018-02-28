@@ -12,12 +12,32 @@
 	<atom:link href="https://www.genuitec.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.genuitec.com</link>
 	<description>The Cloud Control Company</description>
-	<lastBuildDate>Fri, 16 Feb 2018 18:20:37 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Feb 2018 18:33:28 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=4.9.2</generator>
 	<item>
+		<title>Angular Observables and Promises &#8211; How to Use Them</title>
+		<link>https://www.genuitec.com/angular-observables-and-promises/</link>
+		<pubDate>Wed, 21 Feb 2018 14:43:29 +0000</pubDate>
+		<dc:creator><![CDATA[dunebook7]]></dc:creator>
+				<category><![CDATA[Eclipse]]></category>
+		<category><![CDATA[Genuitec]]></category>
+		<category><![CDATA[MyEclipse]]></category>
+		<category><![CDATA[Programming Tips]]></category>
+		<category><![CDATA[Webclipse]]></category>
+		<category><![CDATA[observables]]></category>
+		<category><![CDATA[promises]]></category>
+		<category><![CDATA[RxJS]]></category>
+		<category><![CDATA[using promises and observables]]></category>
+
+		<guid isPermaLink="false">https://www.genuitec.com/?p=556961</guid>
+		<description><![CDATA[<p>Angular, as we all know, is a JavaScript framework that makes it easy to build web applications. RxJS is really about bringing the principles of functional programming to JavaScript.Functional Programming in JavaScript?It all started with the rise of asynchronicity or asynchronous JavaScript,where we have data that is flowing through our application coming from different sources, [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.genuitec.com/angular-observables-and-promises/">Angular Observables and Promises &#8211; How to Use Them</a> appeared first on <a rel="nofollow" href="https://www.genuitec.com">Genuitec</a>.</p>
+]]></description>
+		</item>
+		<item>
 		<title>Top Angular Courses &#8211; Our Ten Picks!</title>
 		<link>https://www.genuitec.com/top-angular-courses/</link>
 		<pubDate>Thu, 15 Feb 2018 18:21:33 +0000</pubDate>
@@ -287,26 +307,6 @@
 <p>The post <a rel="nofollow" href="https://www.genuitec.com/2017-ci-9-decking-holidays-devstyle/">2017 CI 9 &#8211; Decking up for the Holidays with DevStyle and More!</a> appeared first on <a rel="nofollow" href="https://www.genuitec.com">Genuitec</a>.</p>
 ]]></description>
 		</item>
-		<item>
-		<title>Gradle vs Maven &#8211; in Search for the Perfect Build Automation Tool</title>
-		<link>https://www.genuitec.com/gradle-vs-maven-search-perfect-build-automation-tool/</link>
-		<pubDate>Fri, 24 Nov 2017 17:54:35 +0000</pubDate>
-		<dc:creator><![CDATA[Wanda Muriy]]></dc:creator>
-				<category><![CDATA[Eclipse]]></category>
-		<category><![CDATA[Genuitec]]></category>
-		<category><![CDATA[MyEclipse]]></category>
-		<category><![CDATA[gradle]]></category>
-		<category><![CDATA[gradle features]]></category>
-		<category><![CDATA[gradle vs maven]]></category>
-		<category><![CDATA[maven]]></category>
-		<category><![CDATA[maven features]]></category>
-		<category><![CDATA[maven vs gradle]]></category>
-
-		<guid isPermaLink="false">https://www.genuitec.com/?p=543361</guid>
-		<description><![CDATA[<p>In your quest for the perfect build automation tool, you have probably come across Maven and Gradle &#8211; the two big players in the field. The decision here is no less tricky than picking just the right ingredients for that awesome holiday dish you might be thinking about preparing. Of course, each tool has its [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://www.genuitec.com/gradle-vs-maven-search-perfect-build-automation-tool/">Gradle vs Maven &#8211; in Search for the Perfect Build Automation Tool</a> appeared first on <a rel="nofollow" href="https://www.genuitec.com">Genuitec</a>.</p>
-]]></description>
-		</item>
 	</channel>
 </rss>
 
@@ -315,7 +315,7 @@ Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/pro
 
 Page Caching using disk: enhanced (SSL caching disabled) 
 Content Delivery Network via resources.cloud.genuitec.com
-Database Caching 84/145 queries in 1.373 seconds using disk
+Database Caching 89/148 queries in 1.322 seconds using disk
 
-Served from: www.genuitec.com @ 2018-02-17 11:55:08 by W3 Total Cache
+Served from: www.genuitec.com @ 2018-02-27 15:05:54 by W3 Total Cache
 -->

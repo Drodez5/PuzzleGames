@@ -1,7 +1,7 @@
 colorArrayBracket=121,171,255
 colorArrayBracketEnabled=true
 colorArrayBracketStyle=0
-colorBoolean=141,203,226
+colorBoolean=255,255,255
 colorBooleanEnabled=true
 colorBooleanStyle=0
 colorBracket=121,171,255
@@ -16,7 +16,7 @@ colorKeyStyle=0
 colorMatchBracket=121,171,255
 colorMatchBracketEnabled=true
 colorMatchBracketStyle=0
-colorNull=141,203,226
+colorNull=255,255,255
 colorNullEnabled=true
 colorNullStyle=0
 colorNumber=127,179,71

@@ -1,0 +1,51 @@
+.root{
+	-fx-background-color: linear-gradient(to bottom, white, black);
+}
+
+
+
+#tituloLabel , #tituloOpciones{
+	-fx-font-family: 'Impact';
+	-fx-font-size: 50pt;
+	-fx-effect: dropshadow(gaussian,darkgray,3,3,3,3) ;
+}
+
+#tituloPartida{
+	-fx-font-family: 'Impact';
+	-fx-font-size: 30pt;
+	-fx-effect: dropshadow(gaussian,darkgray,3,3,3,3) ;
+}
+
+.button {
+	-fx-background-color: black;
+	-fx-font-size: 15pt;
+	-fx-font-weight: bold;
+	-fx-text-fill:white;
+}
+.button:hover {
+	-fx-background-color: white;
+	-fx-text-fill:black;
+	
+}
+.play {
+	-fx-background-color: black ;
+	-fx-text-fill:white;
+	
+}
+.score {
+	-fx-background-color: black ;
+	-fx-text-fill:white;
+	
+}
+.about {
+	-fx-background-color: black ;
+	-fx-text-fill:white;
+}
+.exit {
+	-fx-background-color: black ;
+	-fx-text-fill:white;
+}
+.label{
+	-fx-font-weight: bold;
+	-fx-text-fill:black;
+}

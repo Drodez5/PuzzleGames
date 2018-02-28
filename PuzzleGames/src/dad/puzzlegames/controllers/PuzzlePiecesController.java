@@ -1,100 +1,295 @@
 package dad.puzzlegames.controllers;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+
 import java.util.ResourceBundle;
+
 
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.BorderPane;
 
 public class PuzzlePiecesController implements Initializable {
-	
+
 	@FXML
-    private BorderPane vista;
+	private BorderPane vista;
 
-    @FXML
-    private Label tituloPartidaLabel;
+	@FXML
+	private Button siguienteButton;
 
-    @FXML
-    private Label nombreLabel;
+	@FXML
+	private Button abandonarButton;
 
-    @FXML
-    private Label tiempoLabel;
+	@FXML
+	private Label tituloPartida;
 
-    @FXML
-    private Label rondaLabel;
+	@FXML
+	private Label nombreLabel;
 
-    @FXML
-    private ImageView imagen1Tab;
+	@FXML
+	private Label tiempoLabel;
 
-    @FXML
-    private ImageView imagen2Tab;
+	@FXML
+	private Label rondaLabel;
 
-    @FXML
-    private ImageView imagen3Tab;
+	@FXML
+	private ImageView imagen1Tab;
 
-    @FXML
-    private ImageView imagen4Tab;
+	@FXML
+	private ImageView imagen2Tab;
 
-    @FXML
-    private ImageView imagen5Tab;
+	@FXML
+	private ImageView imagen3Tab;
 
-    @FXML
-    private ImageView imagen6Tab;
+	@FXML
+	private ImageView imagen4Tab;
 
-    @FXML
-    private ImageView imagen7Tab;
+	@FXML
+	private ImageView imagen5Tab;
 
-    @FXML
-    private ImageView imagen8Tab;
+	@FXML
+	private ImageView imagen6Tab;
 
-    @FXML
-    private ImageView imagen9Tab;
+	@FXML
+	private ImageView imagen7Tab;
 
-    @FXML
-    private ImageView imagen1Ficha;
+	@FXML
+	private ImageView imagen8Tab;
 
-    @FXML
-    private ImageView imagen2Ficha;
+	@FXML
+	private ImageView imagen9Tab;
 
-    @FXML
-    private ImageView imagen3Ficha;
+	@FXML
+	private ImageView imagen1Ficha;
 
-    @FXML
-    private ImageView imagen4Ficha;
+	@FXML
+	private ImageView imagen2Ficha;
 
-    @FXML
-    private ImageView imagen5Ficha;
+	@FXML
+	private ImageView imagen3Ficha;
 
-    @FXML
-    private ImageView imagen6Ficha;
+	@FXML
+	private ImageView imagen4Ficha;
 
-    @FXML
-    private ImageView imagen7Ficha;
+	@FXML
+	private ImageView imagen5Ficha;
 
-    @FXML
-    private ImageView imagen8Ficha;
+	@FXML
+	private ImageView imagen6Ficha;
 
-    @FXML
-    private ImageView imagen9Ficha;
+	@FXML
+	private ImageView imagen7Ficha;
 
+	@FXML
+	private ImageView imagen8Ficha;
+
+	@FXML
+	private ImageView imagen9Ficha;
 	
-	
+	Image img;
 
 	public PuzzlePiecesController() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/dad/puzzlegames/views/PuzzlePiecesView.fxml"));
 		loader.setController(this);
 		loader.load();
 	}
+	
+	//TABLERO
+	@FXML
+	 private void handleDragOverTab(DragEvent event) {
+		if(event.getDragboard().hasImage()) {
+		event.acceptTransferModes(TransferMode.ANY);
+		}
+
+		event.consume();
+	 }
+	
+	  
+	
+    @FXML
+    private void handleDragDroppedImg1Tab(DragEvent event) throws FileNotFoundException {
+    	img= event.getDragboard().getImage();
+    	imagen1Tab.setImage(img);
+    	event.consume();
+    }
+    
+    @FXML
+    private void handleDragDroppedImg2Tab(DragEvent event) {
+    	img= event.getDragboard().getImage();
+    	imagen2Tab.setImage(img);
+    	event.consume();
+
+    }
+    @FXML
+    private void handleDragDroppedImg3Tab(DragEvent event) {
+    	 img= event.getDragboard().getImage();
+    	imagen3Tab.setImage(img);
+    	event.consume();
+
+    }
+
+    @FXML
+    private void handleDragDroppedImg4Tab(DragEvent event) {
+    	 img= event.getDragboard().getImage();
+    	imagen4Tab.setImage(img);
+    	event.consume();
+
+    }
+
+    @FXML
+    private void handleDragDroppedImg5Tab(DragEvent event) {
+    	img= event.getDragboard().getImage();
+    	imagen5Tab.setImage(img);
+    	event.consume();
+
+    }
+
+    @FXML
+    private void handleDragDroppedImg6Tab(DragEvent event) {
+    	img= event.getDragboard().getImage();
+    	imagen6Tab.setImage(img);
+    	event.consume();
+
+    }
+
+    @FXML
+    private void handleDragDroppedImg7Tab(DragEvent event) {
+    	img= event.getDragboard().getImage();
+    	imagen7Tab.setImage(img);
+    	event.consume();
+
+    }
+
+    @FXML
+    private void handleDragDroppedImg8Tab(DragEvent event) {
+     img= event.getDragboard().getImage();
+    	imagen8Tab.setImage(img);
+    	event.consume();
+
+    }
+
+    @FXML
+    private void handleDragDroppedImg9Tab(DragEvent event) {
+    	 img= event.getDragboard().getImage();
+    	imagen9Tab.setImage(img);
+    	event.consume();
+
+    }
+
+   
+  
+    
+    // FICHAS
+    @FXML
+    private void handleDragDetectionImg1Ficha(MouseEvent event) {
+    	Dragboard db = imagen1Ficha.startDragAndDrop(TransferMode.MOVE);
+    	ClipboardContent cb = new ClipboardContent();
+    	cb.putImage(imagen1Ficha.getImage());
+    	db.setContent(cb);
+    	event.consume();
+
+    }
+    
+    @FXML
+    private void handleDragDetectionImg2Ficha(MouseEvent event) {
+    	Dragboard db = imagen2Ficha.startDragAndDrop(TransferMode.MOVE);
+    	ClipboardContent cb = new ClipboardContent();
+    	cb.putImage(imagen2Ficha.getImage());
+    	db.setContent(cb);
+    	event.consume();
+
+    }
+    
+    @FXML
+    private void handleDragDetectionImg3Ficha(MouseEvent event) {
+    	Dragboard db = imagen3Ficha.startDragAndDrop(TransferMode.MOVE);
+    	ClipboardContent cb = new ClipboardContent();
+    	cb.putImage(imagen3Ficha.getImage());
+    	db.setContent(cb);
+    	event.consume();
+
+    }
+
+    @FXML
+    private void handleDragDetectionImg4Ficha(MouseEvent event) {
+    	Dragboard db = imagen4Ficha.startDragAndDrop(TransferMode.MOVE);
+    	ClipboardContent cb = new ClipboardContent();
+    	cb.putImage(imagen4Ficha.getImage());
+    	db.setContent(cb);
+    	event.consume();
+
+    }
+
+    @FXML
+    private void handleDragDetectionImg5Ficha(MouseEvent event) {
+    	Dragboard db = imagen5Ficha.startDragAndDrop(TransferMode.MOVE);
+    	ClipboardContent cb = new ClipboardContent();
+    	cb.putImage(imagen5Ficha.getImage());
+    	db.setContent(cb);
+    	event.consume();
+
+    }
+
+    @FXML
+    private void handleDragDetectionImg6Ficha(MouseEvent event) {
+    	Dragboard db = imagen6Ficha.startDragAndDrop(TransferMode.MOVE);
+    	ClipboardContent cb = new ClipboardContent();
+    	cb.putImage(imagen6Ficha.getImage());
+    	db.setContent(cb);
+    	event.consume();
+
+    }
+
+    @FXML
+    private void handleDragDetectionImg7Ficha(MouseEvent event) {
+    	Dragboard db = imagen7Ficha.startDragAndDrop(TransferMode.MOVE);
+    	ClipboardContent cb = new ClipboardContent();
+    	cb.putImage(imagen7Ficha.getImage());
+    	db.setContent(cb);
+    	event.consume();
+
+    }
+
+    @FXML
+    private void handleDragDetectionImg8Ficha(MouseEvent event) {
+    	Dragboard db = imagen8Ficha.startDragAndDrop(TransferMode.MOVE);
+    	ClipboardContent cb = new ClipboardContent();
+    	cb.putImage(imagen8Ficha.getImage());
+    	db.setContent(cb);
+    	event.consume();
+
+    }
+
+    @FXML
+    private void handleDragDetectionImg9Ficha(MouseEvent event) {
+    	Dragboard db = imagen9Ficha.startDragAndDrop(TransferMode.MOVE);
+    	ClipboardContent cb = new ClipboardContent();
+    	cb.putImage(imagen9Ficha.getImage());
+    	db.setContent(cb);
+    	event.consume();
+
+    }
+    
+    
+  
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
 
 	}
 
@@ -105,8 +300,6 @@ public class PuzzlePiecesController implements Initializable {
 	public void setVista(BorderPane vista) {
 		this.vista = vista;
 	}
-
-
 
 	public ImageView getImagen1Tab() {
 		return imagen1Tab;
@@ -252,12 +445,12 @@ public class PuzzlePiecesController implements Initializable {
 		this.imagen9Ficha = imagen9Ficha;
 	}
 
-	public Label getTituloPartidaLabel() {
-		return tituloPartidaLabel;
+	public Label getTituloPartida() {
+		return tituloPartida;
 	}
 
-	public void setTituloPartidaLabel(Label tituloPartidaLabel) {
-		this.tituloPartidaLabel = tituloPartidaLabel;
+	public void setTituloPartida(Label tituloPartida) {
+		this.tituloPartida = tituloPartida;
 	}
 
 	public Label getNombreLabel() {
@@ -272,8 +465,8 @@ public class PuzzlePiecesController implements Initializable {
 		return tiempoLabel;
 	}
 
-	public void setTiempoLabel(Label tiempoLabel) {
-		this.tiempoLabel = tiempoLabel;
+	public void setTiempoLabel(String tiempoLabel) {
+		this.tiempoLabel.setText(tiempoLabel);
 	}
 
 	public Label getRondaLabel() {
@@ -283,11 +476,31 @@ public class PuzzlePiecesController implements Initializable {
 	public void setRondaLabel(Label rondaLabel) {
 		this.rondaLabel = rondaLabel;
 	}
-	
+
+	public Button getSiguienteButton() {
+		return siguienteButton;
+	}
+
+	public void setSiguienteButton(Button siguienteButton) {
+		this.siguienteButton = siguienteButton;
+	}
+
+	public Button getAbandonarButton() {
+		return abandonarButton;
+	}
+
+	public void setAbandonarButton(Button abandonarButton) {
+		this.abandonarButton = abandonarButton;
+	}
+
+	public void setNombreLabel(Label nombreLabel) {
+		this.nombreLabel = nombreLabel;
+	}
+
+	public void setTiempoLabel(Label tiempoLabel) {
+		this.tiempoLabel = tiempoLabel;
+	}
 	
 	
 
-
-	
-	
 }

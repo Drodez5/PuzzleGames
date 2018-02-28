@@ -17,7 +17,7 @@
    <top>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="600.0">
                <children>
                   <Label fx:id="tituloLabel" text="PUZZLEGAMES" />
                   <Label fx:id="subTituloLabel" text="Marcador" />

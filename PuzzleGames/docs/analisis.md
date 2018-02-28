@@ -10,7 +10,7 @@
 
 #### *Opciones de Partida*
 
-El jugador pondrá su nombre/alias, el número de rompecabezas a resolver, dificultad (número de piezas del puzzle), el tiempo para resolver cada puzzle y el modo de juego. Además el jugador podrá personalizar el juego subiendo sus propias imágenes, como piezas del puzzle. Ninguno de los campos podrá ser nulo y si no se selecciona ninguna carpeta de imágenes, se utilizarán las propuestas por la aplicación.
+El jugador pondrá su nombre/alias, el número de rompecabezas a resolver, dificultad (número de piezas del puzzle) y el modo de juego. Además el jugador podrá personalizar el juego subiendo sus propias imágenes, como piezas del puzzle. Ninguno de los campos podrá ser nulo y si no se selecciona ninguna carpeta de imágenes, se utilizarán las propuestas por la aplicación.
 
 
 
@@ -18,9 +18,23 @@ El jugador pondrá su nombre/alias, el número de rompecabezas a resolver, dific
 
 Según el modo de juego que se haya seleccionado:
 
+
+
+**Modo fácil**
+
+El modo fácil cuenta con un tiempo prestablecido de 3 minutos, además de contar con una facilidad visible en el nivel (poseerá menos dificultad, menos columnas, menos piezas...)
+
+**Modo medio**
+
+El modo medio cuenta con un tiempo prestablecido de 1 minuto, aumenta un poco la dificultad respecto al modo fácil (Aumento de piezas, columnas...)
+
+**Modo dificil**
+
+El jugador cuenta con un tiempo prestablecido de 30 segundos, la dificultad alcanza su punto culminante en este nivel.
+
 **PuzzlePieces**
 
-El jugador deberá de montar el puzzle mediante la colocación correcta de los fragmentos de la imagen resultado. Todas las piezas se podrán mover, al resolver un puzzle, pasará al siguiente puzzle automáticamente una vez resuelto (y si es el último puzzle aparecerá un resumen con los datos de la partida). Cuando todas las piezas estén colocadas, el tiempo se detendrá y su puntuación se guardará.
+El jugador deberá de montar el puzzle mediante la colocación correcta de los fragmentos de la imagen resultado. Todas las piezas se podrán mover, al resolver un puzzle, pasará al siguiente puzzle automáticamente una vez resuelto (y si es el último puzzle aparecerá un resumen con los datos de la partida). Cuando todas las piezas estén colocadas, su puntuación se guardará.
 
 Al completar todos los puzzles propuestos, la puntuación total se sumará y su puntuación se guardará en el marcador en la nube. Si por alguna razón, el jugador desiste del rompecabezas pulsando el botón "Abandonar", su puntuación será evaluada dependiendo del número de puzzles resueltos hasta el momento y saldrá directamente a la pantalla de inicio.
 

@@ -1,41 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
-<libraryInfo home="C:\desarrollo" version="1.8.0_144">
+<libraryInfo home="C:\Desarrollo\jdk\otros" version="1.8.0_161">
 <bootpath>
-<entry path="C:\desarrollo\jre\lib\resources.jar"/>
-<entry path="C:\desarrollo\jre\lib\rt.jar"/>
-<entry path="C:\desarrollo\jre\lib\sunrsasign.jar"/>
-<entry path="C:\desarrollo\jre\lib\jsse.jar"/>
-<entry path="C:\desarrollo\jre\lib\jce.jar"/>
-<entry path="C:\desarrollo\jre\lib\charsets.jar"/>
-<entry path="C:\desarrollo\jre\lib\jfr.jar"/>
-<entry path="C:\desarrollo\jre\classes"/>
+<entry path="C:\Desarrollo\jdk\otros\lib\resources.jar"/>
+<entry path="C:\Desarrollo\jdk\otros\lib\rt.jar"/>
+<entry path="C:\Desarrollo\jdk\otros\lib\sunrsasign.jar"/>
+<entry path="C:\Desarrollo\jdk\otros\lib\jsse.jar"/>
+<entry path="C:\Desarrollo\jdk\otros\lib\jce.jar"/>
+<entry path="C:\Desarrollo\jdk\otros\lib\charsets.jar"/>
+<entry path="C:\Desarrollo\jdk\otros\lib\jfr.jar"/>
+<entry path="C:\Desarrollo\jdk\otros\classes"/>
 </bootpath>
 <extensionDirs>
-<entry path="C:\desarrollo\jre\lib\ext"/>
+<entry path="C:\Desarrollo\jdk\otros\lib\ext"/>
 <entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
 </extensionDirs>
 <endorsedDirs>
-<entry path="C:\desarrollo\jre\lib\endorsed"/>
-</endorsedDirs>
-</libraryInfo>
-<libraryInfo home="C:\desarrollo\jre" version="1.8.0_144">
-<bootpath>
-<entry path="C:\desarrollo\jre\lib\resources.jar"/>
-<entry path="C:\desarrollo\jre\lib\rt.jar"/>
-<entry path="C:\desarrollo\jre\lib\sunrsasign.jar"/>
-<entry path="C:\desarrollo\jre\lib\jsse.jar"/>
-<entry path="C:\desarrollo\jre\lib\jce.jar"/>
-<entry path="C:\desarrollo\jre\lib\charsets.jar"/>
-<entry path="C:\desarrollo\jre\lib\jfr.jar"/>
-<entry path="C:\desarrollo\jre\classes"/>
-</bootpath>
-<extensionDirs>
-<entry path="C:\desarrollo\jre\lib\ext"/>
-<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
-</extensionDirs>
-<endorsedDirs>
-<entry path="C:\desarrollo\jre\lib\endorsed"/>
+<entry path="C:\Desarrollo\jdk\otros\lib\endorsed"/>
 </endorsedDirs>
 </libraryInfo>
 </libraryInfos>

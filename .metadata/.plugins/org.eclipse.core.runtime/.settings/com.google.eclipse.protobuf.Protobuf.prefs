@@ -13,7 +13,7 @@ com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enumLiteralDefini
 com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enumLiteralIndex.bgColor=28,31,34
 com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enumLiteralIndex.color=255,255,255
 com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.keyword.bgColor=28,31,34
-com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.keyword.color=141,203,226
+com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.keyword.color=255,255,255
 com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.message.bgColor=28,31,34
 com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.message.color=210,82,82
 com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.messageDefinition.bgColor=28,31,34

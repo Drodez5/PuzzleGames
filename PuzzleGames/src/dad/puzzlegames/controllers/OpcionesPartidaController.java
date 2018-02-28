@@ -42,8 +42,6 @@ public class OpcionesPartidaController implements Initializable {
 	@FXML
 	private TextField nombreText;
 
-	@FXML
-	private Spinner<Integer> tiempoSpinner;
 
 	@FXML
 	private Button abrirButton;
@@ -71,10 +69,6 @@ public class OpcionesPartidaController implements Initializable {
 		// Dificultad combo
 		dificultadCombo.getItems().setAll(Dificultad.values());
 		dificultadCombo.setValue(Dificultad.FACIL);
-
-		// tiempo spinner
-		SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(30, 180, 30);
-		tiempoSpinner.setValueFactory(valueFactory);
 
 		// juego combo
 		juegoCombo.getItems().setAll(Modo.values());
@@ -118,13 +112,7 @@ public class OpcionesPartidaController implements Initializable {
 		this.nombreText = nombreText;
 	}
 
-	public Spinner<Integer> getTiempoSpinner() {
-		return tiempoSpinner;
-	}
 
-	public void setTiempoSpinner(Spinner<Integer> tiempoSpinner) {
-		this.tiempoSpinner = tiempoSpinner;
-	}
 
 	public Button getAbrirButton() {
 		return abrirButton;
