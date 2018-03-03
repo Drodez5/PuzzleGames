@@ -101,7 +101,8 @@ public class MatchPuzzleController implements Initializable {
 	
 
 	}
-
+	 
+	 
 	public BorderPane getVista() {
 		return vista;
 	}

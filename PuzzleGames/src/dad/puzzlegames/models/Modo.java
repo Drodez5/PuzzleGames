@@ -1,7 +1,7 @@
 package dad.puzzlegames.models;
 
 public enum Modo {
-	BEJEWELED,
+	SLIDING_PUZZLE,
 	PUZZLE_PIECES,
 	MATCH_PUZZLE
 

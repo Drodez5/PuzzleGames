@@ -1,7 +1,9 @@
 package dad.puzzlegames.models;
 
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -10,14 +12,14 @@ public class Jugador {
 	private StringProperty nombre;
 	private StringProperty dificultad;
 	private StringProperty directorio;
-	private StringProperty modo;
+	private ObjectProperty<Modo> modo;
 	private IntegerProperty rondas;
 
 	public Jugador() {
 		nombre = new SimpleStringProperty();
 		dificultad = new SimpleStringProperty();
 		directorio = new SimpleStringProperty();
-		modo = new SimpleStringProperty();
+		modo = new SimpleObjectProperty<>(this,"modo");
 		rondas = new SimpleIntegerProperty();
 	}
 
@@ -57,17 +59,7 @@ public class Jugador {
 		this.directorioProperty().set(directorio);
 	}
 
-	public final StringProperty modoProperty() {
-		return this.modo;
-	}
-
-	public final String getModo() {
-		return this.modoProperty().get();
-	}
-
-	public final void setModo(final String modo) {
-		this.modoProperty().set(modo);
-	}
+	
 
 	public final IntegerProperty rondasProperty() {
 		return this.rondas;
@@ -80,5 +72,20 @@ public class Jugador {
 	public final void setRondas(final int rondas) {
 		this.rondasProperty().set(rondas);
 	}
+
+	public final ObjectProperty<Modo> modoProperty() {
+		return this.modo;
+	}
+	
+
+	public final Modo getModo() {
+		return this.modoProperty().get();
+	}
+	
+
+	public final void setModo(final Modo modo) {
+		this.modoProperty().set(modo);
+	}
+	
 
 }

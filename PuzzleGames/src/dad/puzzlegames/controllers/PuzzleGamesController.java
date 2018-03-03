@@ -2,6 +2,7 @@ package dad.puzzlegames.controllers;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,6 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -30,13 +30,16 @@ import javafx.scene.control.Dialog;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.media.AudioClip;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+/**
+ * @author Domingo Rodriguez
+ * @version 1.0
+ */
 public class PuzzleGamesController implements Initializable {
 
 	private MenuController controladorMenu;
@@ -46,19 +49,27 @@ public class PuzzleGamesController implements Initializable {
 	private MatchPuzzleController controladorMatchPuzzle;
 	private BorderPane vista;
 	private Stage appStage;
-	private String directorio = null;
 
 	private Integer tiempoMedio = 60;
-	private Integer tiempoFacil = 5; // 180
+	private Integer tiempoFacil = 180;
 	private Integer tiempoDificil = 30;
 	private Integer sec;
 	private int rondas = 0;
 	private int rondaActual = 1;
-	private Jugador jugadorNuevo;
+
 	private ArrayList<File> imagenes;
+	private ArrayList<Image> imagenesMatch, imagenesPiezes;
 	private Timeline tiempo;
 	private AudioClip audio;
-	private boolean sonido=true;
+
+	private int clic = 0;
+	private int clic1 = -1;
+	private int clic2 = -1;
+
+	private FadeTransition transicionEntrada, transicionSalida;
+
+	// Modelo
+	private Jugador jugadorNuevo;
 
 	private Utilidades util;
 
@@ -76,11 +87,43 @@ public class PuzzleGamesController implements Initializable {
 
 		vista = new BorderPane();
 		vista.setCenter(new ImageView("/dad/puzzlegames/resources/splashimage.jpg"));
-		if (cargaSplash == false) {
-			loadSplashScreen();
-		}
-		
 
+		if (cargaSplash == false) {
+
+			loadSplashScreen();
+
+		}
+
+		initialize(null, null);
+
+	}
+
+	/**
+	 * Metodo initialize
+	 * 
+	 * @param location,resources
+	 */
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		// INSTANCIAS E INICIALIZACIONES
+		audio = new AudioClip(getClass().getResource("/dad/puzzlegames/resources/openingIntro.mp3").toExternalForm());
+		jugadorNuevo = new Jugador();
+		util = new Utilidades();
+		imagenes = new ArrayList<>();
+		imagenesMatch = util.cargaMatches();
+		imagenesPiezes = new ArrayList<>();
+		audio.play();
+
+		controladorOpciones.getJuegoCombo().setOnAction(e -> {
+			if (controladorOpciones.getJuegoCombo().getValue() == Modo.MATCH_PUZZLE) {
+				jugadorNuevo.setDirectorio(" ");
+				controladorOpciones.getAbrirButton().setDisable(true);
+			} else {
+				controladorOpciones.getAbrirButton().setDisable(false);
+			}
+		});
+
+		// EVENTOS
 		// CONTROLADOR MENU
 		controladorMenu.getJugarButton().setOnAction(e -> onOpcionesPartidaButtonAction(e));
 		controladorMenu.getMarcadorButton().setOnAction(e -> onMarcadorButtonAction(e));
@@ -100,53 +143,68 @@ public class PuzzleGamesController implements Initializable {
 
 		// CONTROLADOR MATCH PUZZLE
 		controladorMatchPuzzle.getAbandonarButton().setOnAction(e -> onAbandonarButtonAction(e));
+		controladorMatchPuzzle.getSiguienteButton().setOnAction(e -> onTerminarButtonAction(e));
 
 		// CONTROLADOR PUZZLE PIECES
 		controladorPuzzlePieces.getAbandonarButton().setOnAction(e -> onAbandonarButtonAction(e));
+		controladorPuzzlePieces.getSiguienteButton().setOnAction(e -> onTerminarButtonAction(e));
+		
+		
 
-		
-		initialize(null, null);
-		
+		// BINDEOS
+		controladorOpciones.getContinuarButton().disableProperty()
+				.bind(controladorOpciones.getRondasCombo().valueProperty().isEqualTo(1));
+		controladorOpciones.getContinuarButton().disableProperty()
+				.bind(controladorOpciones.getNombreText().textProperty().isEmpty());
+		controladorOpciones.getContinuarButton().disableProperty().bind(jugadorNuevo.directorioProperty().isEmpty());
+//		controladorMarcador.getGenerarInformeButton().disableProperty().bind(controladorMarcador.getTableScores().itemsProperty().isEqualTo(0));
 
 	}
-	
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		audio = new AudioClip(getClass().getResource("/dad/puzzlegames/resources/openingIntro.mp3").toExternalForm());
-		audio.play();
-		util = new Utilidades();
-		imagenes = new ArrayList<>();
-		
-		controladorOpciones.getJuegoCombo().setOnAction(e->{
-			if(controladorOpciones.getJuegoCombo().getValue()==Modo.BEJEWELED |controladorOpciones.getJuegoCombo().getValue()==Modo.MATCH_PUZZLE) {
-				
-				controladorOpciones.getAbrirButton().setDisable(true);
-			} else {
-				controladorOpciones.getAbrirButton().setDisable(false);
-			}
-		});
-		
-		
+
+	/*
+	 * Metodo de terminar
+	 * 
+	 * @param ActionEvent e
+	 * 
+	 */
+	private void onTerminarButtonAction(ActionEvent e) {
+
+		tiempo.stop();
+		if (compruebaPuzzles() == true) {
+			System.out.println("La victoria es nuestra");
+		} else {
+			System.out.println("La derrota yacerá sobre tu tumba");
+		}
+
 	}
 
+	/**
+	 * Metodo de sonido
+	 * 
+	 * @param ActionEvent
+	 *            e
+	 * 
+	 */
 	private void onSonidoButtonAction(ActionEvent e) {
 		if (audio.isPlaying()) {
 			audio.stop();
 			controladorMenu.getSonidoImage().setImage(new Image("/dad/puzzlegames/resources/sound_off.png"));
-			this.sonido=false;
-			
 
 		} else {
 			audio.play();
 			controladorMenu.getSonidoImage().setImage(new Image("/dad/puzzlegames/resources/sound_on.png"));
-			this.sonido=true;
 
 		}
 
 	}
-	
 
-
+	/**
+	 * Metodo de abandonar
+	 * 
+	 * @param ActionEvent
+	 *            e
+	 * 
+	 */
 	private void onAbandonarButtonAction(ActionEvent e) {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("¿Seguro que deseas abandonar?");
@@ -157,13 +215,18 @@ public class PuzzleGamesController implements Initializable {
 
 		Optional<ButtonType> result = alert.showAndWait();
 		if (result.get() == ButtonType.OK) {
-			audio.play();
+			audio.stop();
 			vista.setCenter(controladorMenu.getVista());
 
 		}
 
 	}
 
+	/**
+	 * Metodo de Tema
+	 * 
+	 * @param ActionEvent
+	 */
 	private void onTemaButtonAction(ActionEvent e) {
 		List<String> choices = new ArrayList<String>();
 		choices.add("EMO");
@@ -202,16 +265,20 @@ public class PuzzleGamesController implements Initializable {
 
 	}
 
+	/**
+	 * Metodo cargar SplashScreen
+	 */
+
 	private void loadSplashScreen() throws IOException {
 		cargaSplash = true;
 
-		FadeTransition transicionEntrada = new FadeTransition(Duration.seconds(2), vista);
+		FadeTransition transicionEntrada = new FadeTransition(Duration.seconds(1), vista);
 		transicionEntrada.setFromValue(1);
 		transicionEntrada.setToValue(0);
 		transicionEntrada.setCycleCount(1);
 		transicionEntrada.play();
 
-		FadeTransition transicionSalida = new FadeTransition(Duration.seconds(2), vista);
+		FadeTransition transicionSalida = new FadeTransition(Duration.seconds(1), vista);
 		transicionSalida.setFromValue(0);
 		transicionSalida.setToValue(1);
 		transicionSalida.setCycleCount(1);
@@ -227,135 +294,48 @@ public class PuzzleGamesController implements Initializable {
 		});
 	}
 
+	/**
+	 * Metodo de jugar
+	 * 
+	 * @param ActionEvent
+	 */
 	private void onJugarButtonAction(ActionEvent e) {
 
-		if (controladorOpciones.getNombreText().getText().equals("")
-				|| controladorOpciones.getNombreText().getText() == null ) {
-			Alert alert = new Alert(AlertType.ERROR);
-			alert.setTitle("Error!!");
-			alert.setHeaderText("Algo ha fallado...");
-			alert.setContentText("Por favor, revise los campos.");
-			alert.initModality(Modality.APPLICATION_MODAL);
-			alert.initOwner(appStage);
-			alert.showAndWait();
+		// CREO A UN NUEVO JUGADOR
 
-		} else {
+		jugadorNuevo.setNombre(controladorOpciones.getNombreText().getText());
+		jugadorNuevo.setDificultad(controladorOpciones.getDificultadCombo().getValue().toString());
+		jugadorNuevo.setModo(controladorOpciones.getJuegoCombo().getValue());
+		jugadorNuevo.setRondas(controladorOpciones.getRondasCombo().getValue());
 
-			// CREO A UN NUEVO JUGADOR
-			jugadorNuevo = new Jugador();
-			jugadorNuevo.setNombre(controladorOpciones.getNombreText().getText());
-			jugadorNuevo.setDificultad(controladorOpciones.getDificultadCombo().getValue().toString());
-			jugadorNuevo.setModo(controladorOpciones.getJuegoCombo().getValue().toString());
-			jugadorNuevo.setDirectorio(directorio);
-			jugadorNuevo.setRondas(controladorOpciones.getRondasCombo().getValue());
+		// ESTABLECEMOS EL NUMERO DE RONDAS
+		this.rondas = controladorOpciones.getRondasCombo().getValue();
 
-			// ESTABLECEMOS EL NUMERO DE RONDAS
-			this.rondas = controladorOpciones.getRondasCombo().getValue();
+		switch (controladorOpciones.getDificultadCombo().getValue()) {
+		case FACIL:
+			System.out.println("FACIL");
 
-			switch (controladorOpciones.getDificultadCombo().getValue()) {
-			case FACIL:
-				System.out.println("FACIL");
+			switch (controladorOpciones.getJuegoCombo().getValue()) {
+			case PUZZLE_PIECES:
+				System.out.println("PUZZLE PIECES");
+				if (recolectaImagenes() == true) {
 
-				switch (controladorOpciones.getJuegoCombo().getValue()) {
-				case PUZZLE_PIECES:
-					System.out.println("PUZZLE PIECES");
+					iniciarPartidaPuzzlePiecesFacil(jugadorNuevo);
 
-					if(directorio!=null) {
-					if (recolectaImagenes() == true) {
-						
-						if(sonido==true) {
-							audio.stop();
-							audio = new AudioClip(getClass().getResource("/dad/puzzlegames/resources/partidaMusic.mp3").toExternalForm());
-							audio.play();
-							
-						} else {
-							audio.stop();
-							
-						}
-
-						iniciarPartidaPuzzlePiecesFacil(jugadorNuevo);
-
-					}
-					} else {
-						
-						Alert alert = new Alert(AlertType.ERROR);
-						alert.setTitle("Error!!");
-						alert.setHeaderText("Algo ha fallado...");
-						alert.setContentText("Especifique la carpeta de imagenes.");
-						alert.initModality(Modality.APPLICATION_MODAL);
-						alert.initOwner(appStage);
-						alert.showAndWait();
-						
-					}
-
-					break;
-				case MATCH_PUZZLE:
-					System.out.println("MATCH PUZZLE");
-					this.sec = tiempoFacil;
-					cuentaAtras();
-					vista.setCenter(controladorMatchPuzzle.getVista());
-
-					break;
-
-				case BEJEWELED:
-					System.out.println("BEJEWELED");
-					this.sec = tiempoFacil;
-					cuentaAtras();
-					// vista.setCenter(value);
-					break;
-
-				default:
-					break;
 				}
 
 				break;
-
-			case MEDIA:
-				System.out.println("MEDIA");
-				switch (controladorOpciones.getJuegoCombo().getValue()) {
-				case PUZZLE_PIECES:
-					System.out.println("PUZLE PIECES");
-					this.sec = tiempoMedio;
-
-					break;
-				case MATCH_PUZZLE:
-					System.out.println("MATCH PUZZLE");
-					this.sec = tiempoMedio;
-					break;
-
-				case BEJEWELED:
-					System.out.println("BEJEWELED");
-					this.sec = tiempoMedio;
-
-					break;
-
-				default:
-					break;
-				}
+			case MATCH_PUZZLE:
+				System.out.println("MATCH PUZZLE");
+				util.noDisponibleDialog(appStage);
+				this.sec = tiempoFacil;
 
 				break;
 
-			case DIFICIL:
-				System.out.println("DIFICIL");
-				switch (controladorOpciones.getJuegoCombo().getValue()) {
-				case PUZZLE_PIECES:
-					System.out.println("PUZLE PIECES");
-					this.sec = tiempoDificil;
-
-					break;
-				case MATCH_PUZZLE:
-					System.out.println("MATCH PUZZLE");
-					this.sec = tiempoDificil;
-					break;
-
-				case BEJEWELED:
-					System.out.println("BEJEWELED");
-					this.sec = tiempoDificil;
-					break;
-
-				default:
-					break;
-				}
+			case SLIDING_PUZZLE:
+				System.out.println("SLIDING PUZZLE");
+				this.sec = tiempoFacil;
+				cuentaAtras();
 
 				break;
 
@@ -363,34 +343,459 @@ public class PuzzleGamesController implements Initializable {
 				break;
 			}
 
+			break;
+
+		case MEDIA:
+			System.out.println("MEDIA");
+			switch (controladorOpciones.getJuegoCombo().getValue()) {
+			case PUZZLE_PIECES:
+				System.out.println("PUZLE PIECES");
+				util.noDisponibleDialog(appStage);
+				this.sec = tiempoMedio;
+
+				break;
+			case MATCH_PUZZLE:
+				System.out.println("MATCH PUZZLE");
+				this.sec = tiempoMedio;
+				cuentaAtras();
+				vista.setCenter(controladorMatchPuzzle.getVista());
+				iniciarPartidaMatchPuzzle(jugadorNuevo);
+
+				break;
+
+			case SLIDING_PUZZLE:
+				System.out.println("SLIDING PUZZLE");
+				util.noDisponibleDialog(appStage);
+				this.sec = tiempoMedio;
+
+				break;
+
+			default:
+				break;
+			}
+
+			break;
+
+		case DIFICIL:
+			System.out.println("DIFICIL");
+			switch (controladorOpciones.getJuegoCombo().getValue()) {
+			case PUZZLE_PIECES:
+				System.out.println("PUZLE PIECES");
+				this.sec = tiempoDificil;
+				util.noDisponibleDialog(appStage);
+
+				break;
+			case MATCH_PUZZLE:
+				System.out.println("MATCH PUZZLE");
+				this.sec = tiempoDificil;
+				util.noDisponibleDialog(appStage);
+				break;
+
+			case SLIDING_PUZZLE:
+				System.out.println("SLIDING_PUZZLE");
+				this.sec = tiempoDificil;
+				util.noDisponibleDialog(appStage);
+				break;
+
+			default:
+				break;
+			}
+
+			break;
+
+		default:
+			break;
 		}
 
 	}
 
+	/**
+	 * Metodo de iniciar partida
+	 * 
+	 * @param jugadorNuevo
+	 */
+	private void iniciarPartidaMatchPuzzle(Jugador jugadorNuevo) {
+
+		controladorMatchPuzzle.getNamePlayerLabel().setText(jugadorNuevo.getNombre());
+		controladorMatchPuzzle.getRoundLabel().setText(rondaActual + "");
+
+		Image interrogation = new Image("/dad/puzzlegames/resources/interrogation.jpg");
+
+		controladorMatchPuzzle.getImagen1().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen1());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen1());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen1().setImage(imagenesMatch.get(0));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen1().setImage(interrogation);
+				clic++;
+				compruebaClic(1);
+			});
+
+		});
+
+		controladorMatchPuzzle.getImagen2().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen2());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen2());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen2().setImage(imagenesMatch.get(1));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen2().setImage(interrogation);
+				clic++;
+				compruebaClic(2);
+			});
+
+		});
+		controladorMatchPuzzle.getImagen3().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen3());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen3());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen3().setImage(imagenesMatch.get(1));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen3().setImage(interrogation);
+				clic++;
+				compruebaClic(2);
+			});
+
+		});
+		controladorMatchPuzzle.getImagen4().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen4());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen4());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen4().setImage(imagenesMatch.get(2));
+				clic++;
+				compruebaClic(3);
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen4().setImage(interrogation);
+			});
+
+		});
+
+		controladorMatchPuzzle.getImagen5().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen5());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen5());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen5().setImage(imagenesMatch.get(7));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen5().setImage(interrogation);
+				clic++;
+				compruebaClic(8);
+			});
+
+		});
+		controladorMatchPuzzle.getImagen6().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen6());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen6());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen6().setImage(imagenesMatch.get(5));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen6().setImage(interrogation);
+			});
+
+		});
+
+		controladorMatchPuzzle.getImagen7().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen7());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen7());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen7().setImage(imagenesMatch.get(4));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen7().setImage(interrogation);
+				clic++;
+				compruebaClic(5);
+			});
+
+		});
+
+		controladorMatchPuzzle.getImagen8().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen8());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen8());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen8().setImage(imagenesMatch.get(4));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen8().setImage(interrogation);
+				clic++;
+				compruebaClic(5);
+			});
+
+		});
+		controladorMatchPuzzle.getImagen9().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen9());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen9());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen9().setImage(imagenesMatch.get(6));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen9().setImage(interrogation);
+				clic++;
+				compruebaClic(7);
+			});
+
+		});
+
+		controladorMatchPuzzle.getImagen10().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen10());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen10());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen10().setImage(imagenesMatch.get(5));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen10().setImage(interrogation);
+				clic++;
+				compruebaClic(6);
+			});
+
+		});
+
+		controladorMatchPuzzle.getImagen11().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen11());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen11());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen11().setImage(imagenesMatch.get(3));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen11().setImage(interrogation);
+				clic++;
+				compruebaClic(4);
+			});
+
+		});
+
+		controladorMatchPuzzle.getImagen12().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen12());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen12());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen12().setImage(imagenesMatch.get(7));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen12().setImage(interrogation);
+				clic++;
+				compruebaClic(8);
+			});
+
+		});
+		controladorMatchPuzzle.getImagen13().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen13());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen13());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen13().setImage(imagenesMatch.get(0));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen13().setImage(interrogation);
+				clic++;
+				compruebaClic(1);
+			});
+
+		});
+		controladorMatchPuzzle.getImagen14().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen14());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen14());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen14().setImage(imagenesMatch.get(3));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen14().setImage(interrogation);
+				clic++;
+				compruebaClic(4);
+			});
+
+		});
+
+		controladorMatchPuzzle.getImagen15().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen15());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen15());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen15().setImage(imagenesMatch.get(2));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen15().setImage(interrogation);
+				clic++;
+				compruebaClic(3);
+			});
+
+		});
+
+		controladorMatchPuzzle.getImagen16().setOnMouseClicked(e -> {
+			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen16());
+
+			transicionEntrada.play();
+
+			transicionSalida = cerrarTransicion(controladorMatchPuzzle.getImagen16());
+
+			transicionEntrada.setOnFinished(a -> {
+				transicionSalida.play();
+				controladorMatchPuzzle.getImagen16().setImage(imagenesMatch.get(6));
+
+			});
+
+			transicionSalida.setOnFinished(a -> {
+				controladorMatchPuzzle.getImagen16().setImage(interrogation);
+				clic++;
+				compruebaClic(7);
+			});
+
+		});
+
+	}
+
+	/**
+	 * Metodo de abrir
+	 * 
+	 * @param ActionEvent
+	 */
 	private void onAbrirButtonAction(ActionEvent e) {
 		DirectoryChooser directoryChooser = new DirectoryChooser();
 		File selectedDirectory = directoryChooser.showDialog(appStage);
 
 		if (selectedDirectory == null) {
 			controladorOpciones.getDirectorioLabel().setText("No hay directorio seleccionado.");
-			this.directorio = null;
+
 		} else {
 			controladorOpciones.getDirectorioLabel().setText(selectedDirectory.getAbsolutePath());
-			this.directorio = selectedDirectory.getAbsolutePath();
+			jugadorNuevo.setDirectorio(selectedDirectory.getAbsolutePath());
 		}
 
 	}
 
+	/**
+	 * Metodo de volver
+	 * 
+	 * @param ActionEvent
+	 *            e
+	 */
 	private void onAtrasButtonAction(ActionEvent e) {
 		volverAMenu();
 	}
 
+	/**
+	 * Metodo para visualizar el marcador
+	 * 
+	 * @param ActionEvent
+	 *            e
+	 */
 	private void onMarcadorButtonAction(ActionEvent e) {
 		vista.setCenter(controladorMarcador.getVista());
-
 	}
 
-	// METODO SALIR
+	/**
+	 * Metodo para salir
+	 * 
+	 * @param ActionEvent
+	 *            e
+	 */
 	private void onSalirButtonAction(ActionEvent e) {
 		Alert alertExit = new Alert(AlertType.CONFIRMATION);
 		alertExit.setTitle("PuzzleGames");
@@ -406,6 +811,12 @@ public class PuzzleGamesController implements Initializable {
 
 	}
 
+	/**
+	 * Metodo de acerca de
+	 * 
+	 * @param ActionEvent
+	 *            e
+	 */
 	private void onAcercaDeButtonAction(ActionEvent e) {
 		Dialog<Void> dialog = new Dialog<>();
 		dialog.setTitle("About...");
@@ -419,43 +830,42 @@ public class PuzzleGamesController implements Initializable {
 
 	}
 
+	/**
+	 * Metodo cambiar vista opciones
+	 * 
+	 * @param ActionEvent
+	 *            e
+	 */
 	private void onOpcionesPartidaButtonAction(ActionEvent e) {
 		vista.setCenter(controladorOpciones.getVista());
 
 	}
 
+	/**
+	 * Metodo para iniciar Partida Puzzle Pieces Facil
+	 * 
+	 * @param jugadorNuevo
+	 * @throws URISyntaxException
+	 */
 	private void iniciarPartidaPuzzlePiecesFacil(Jugador jugadorNuevo) {
 
 		try {
 			util.trozeaImagenes(imagenes.get(rondaActual), Dificultad.FACIL);
 
-			File archivo1 = new File("\\piezas\\img0.jpg");
-			Image imagen1 = new Image(archivo1.toURI().toString());
-			controladorPuzzlePieces.getImagen1Ficha().setImage(imagen1);
-			File archivo2 = new File("\\piezas\\img1.jpg");
-			Image imagen2 = new Image(archivo2.toURI().toString());
-			controladorPuzzlePieces.getImagen2Ficha().setImage(imagen2);
-			File archivo3 = new File("\\piezas\\img2.jpg");
-			Image imagen3 = new Image(archivo3.toURI().toString());
-			controladorPuzzlePieces.getImagen3Ficha().setImage(imagen3);
-			File archivo4 = new File("\\piezas\\img3.jpg");
-			Image imagen4 = new Image(archivo4.toURI().toString());
-			controladorPuzzlePieces.getImagen4Ficha().setImage(imagen4);
-			File archivo5 = new File("\\piezas\\img4.jpg");
-			Image imagen5 = new Image(archivo5.toURI().toString());
-			controladorPuzzlePieces.getImagen5Ficha().setImage(imagen5);
-			File archivo6 = new File("\\piezas\\img5.jpg");
-			Image imagen6 = new Image(archivo6.toURI().toString());
-			controladorPuzzlePieces.getImagen6Ficha().setImage(imagen6);
-			File archivo7 = new File("\\piezas\\img6.jpg");
-			Image imagen7 = new Image(archivo7.toURI().toString());
-			controladorPuzzlePieces.getImagen7Ficha().setImage(imagen7);
-			File archivo8 = new File("\\piezas\\img7.jpg");
-			Image imagen8 = new Image(archivo8.toURI().toString());
-			controladorPuzzlePieces.getImagen8Ficha().setImage(imagen8);
-			File archivo9 = new File("\\piezas\\img8.jpg");
-			Image imagen9 = new Image(archivo9.toURI().toString());
-			controladorPuzzlePieces.getImagen9Ficha().setImage(imagen9);
+			for (int i = 0; i < 9; i++) {
+				Image imagen = new Image(new File("\\piezas\\img" + i + ".jpg").toURI().toString());
+				imagenesPiezes.add(imagen);
+
+			}
+			controladorPuzzlePieces.getImagen1Ficha().setImage(imagenesPiezes.get(0));
+			controladorPuzzlePieces.getImagen2Ficha().setImage(imagenesPiezes.get(1));
+			controladorPuzzlePieces.getImagen3Ficha().setImage(imagenesPiezes.get(2));
+			controladorPuzzlePieces.getImagen4Ficha().setImage(imagenesPiezes.get(3));
+			controladorPuzzlePieces.getImagen5Ficha().setImage(imagenesPiezes.get(4));
+			controladorPuzzlePieces.getImagen6Ficha().setImage(imagenesPiezes.get(5));
+			controladorPuzzlePieces.getImagen7Ficha().setImage(imagenesPiezes.get(6));
+			controladorPuzzlePieces.getImagen8Ficha().setImage(imagenesPiezes.get(7));
+			controladorPuzzlePieces.getImagen9Ficha().setImage(imagenesPiezes.get(8));
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -470,6 +880,9 @@ public class PuzzleGamesController implements Initializable {
 
 	}
 
+	/**
+	 * Metodo para volver a menu principal
+	 */
 	private void volverAMenu() {
 		vista.setCenter(controladorMenu.getVista());
 	}
@@ -482,22 +895,15 @@ public class PuzzleGamesController implements Initializable {
 		this.vista = vista;
 	}
 
-	// METODO PARA RECOLECTAR IMAGENES DEL DIRECTORIO ESPECIFICADO
+	/**
+	 * Metodo para recolectar imagenes del directorio especificado
+	 */
 	private boolean recolectaImagenes() {
 		boolean check = true;
-
-		Utilidades util = new Utilidades();
 		try {
-			imagenes = util.seleccionaImagen(directorio, rondas);
+			imagenes = util.seleccionaImagen(jugadorNuevo.getDirectorio(), rondas);
 		} catch (IndexOutOfBoundsException e) {
-			Alert alert = new Alert(AlertType.ERROR);
-			alert.setTitle("Error");
-			alert.setHeaderText("Número de imagenes insuficiente");
-			alert.setContentText(
-					"Al parecer has establecido, mayor número de rondas, que imagenes tienes en la carpeta especificada.\nBaja el número de rondas o coloca más imagenes");
-			alert.initOwner(appStage);
-			alert.initModality(Modality.APPLICATION_MODAL);
-			alert.showAndWait();
+			util.imagenesInsuficientesDialog(appStage);
 			check = false;
 
 		}
@@ -506,7 +912,9 @@ public class PuzzleGamesController implements Initializable {
 
 	}
 
-	// METODO DEL CONTADOR
+	/**
+	 * Metodo del contador (Cuenta atrás)
+	 */
 	private void cuentaAtras() {
 		tiempo = new Timeline();
 		tiempo.setCycleCount(Timeline.INDEFINITE);
@@ -522,7 +930,7 @@ public class PuzzleGamesController implements Initializable {
 				controladorPuzzlePieces.getTiempoLabel().setText(util.convertirAMinutos(sec));
 				controladorMatchPuzzle.getTimeLabel().setText(util.convertirAMinutos(sec));
 
-				if (0 >= sec) {
+				if (0 == sec) {
 					System.out.println("Game Over");
 					tiempo.stop();
 
@@ -535,6 +943,126 @@ public class PuzzleGamesController implements Initializable {
 		tiempo.playFromStart();
 	}
 
-	
+	/**
+	 * Metodo que comprueba y registra el clic
+	 * 
+	 * @param int
+	 *            cod
+	 */
+	private void compruebaClic(int cod) {
+
+		if (clic == 2) {
+
+			System.out.println("Clic igual a 2");
+			clic2 = cod;
+			if (clic1 == clic2) {
+				System.out.println("son iguales");
+				resolverMatch(cod);
+			} else {
+				System.out.println("no lo son");
+			}
+
+			this.clic = 0;
+			this.clic1 = -1;
+			this.clic2 = -1;
+		} else if (clic == 1) {
+			System.out.println("Clic igual a 1");
+
+			clic1 = cod;
+
+		}
+	}
+
+	/**
+	 * Metodo de reolverMatch
+	 */
+	private void resolverMatch(int cod) {
+		switch (cod) {
+		case 1:
+			controladorMatchPuzzle.getImagen1().setImage(imagenesMatch.get(0));
+			controladorMatchPuzzle.getImagen13().setImage(imagenesMatch.get(0));
+
+			break;
+
+		case 2:
+			controladorMatchPuzzle.getImagen2().setImage(imagenesMatch.get(1));
+			controladorMatchPuzzle.getImagen3().setImage(imagenesMatch.get(1));
+
+			break;
+
+		case 3:
+			controladorMatchPuzzle.getImagen4().setImage(imagenesMatch.get(2));
+			controladorMatchPuzzle.getImagen15().setImage(imagenesMatch.get(2));
+
+			break;
+
+		case 4:
+			controladorMatchPuzzle.getImagen14().setImage(imagenesMatch.get(3));
+			controladorMatchPuzzle.getImagen11().setImage(imagenesMatch.get(3));
+			break;
+
+		case 5:
+			controladorMatchPuzzle.getImagen7().setImage(imagenesMatch.get(4));
+			controladorMatchPuzzle.getImagen8().setImage(imagenesMatch.get(4));
+			break;
+
+		case 6:
+			controladorMatchPuzzle.getImagen6().setImage(imagenesMatch.get(5));
+			controladorMatchPuzzle.getImagen10().setImage(imagenesMatch.get(5));
+			break;
+
+		case 7:
+			controladorMatchPuzzle.getImagen9().setImage(imagenesMatch.get(6));
+			controladorMatchPuzzle.getImagen16().setImage(imagenesMatch.get(6));
+
+			break;
+		case 8:
+			controladorMatchPuzzle.getImagen5().setImage(imagenesMatch.get(7));
+			controladorMatchPuzzle.getImagen12().setImage(imagenesMatch.get(7));
+
+			break;
+
+		default:
+			break;
+		}
+
+	}
+
+	private boolean compruebaPuzzles() {
+		boolean puzzleCorrecto = false;
+
+		if (jugadorNuevo.getModo() == Modo.MATCH_PUZZLE) {
+
+		} else if (jugadorNuevo.getModo() == Modo.PUZZLE_PIECES) {
+
+			// if() {
+			//
+			// }
+
+		} else {
+
+		}
+
+		return puzzleCorrecto;
+
+	}
+
+	private FadeTransition abrirTransicion(ImageView imagen) {
+		transicionEntrada = new FadeTransition(Duration.seconds(0.5), controladorMatchPuzzle.getImagen1());
+		transicionEntrada.setFromValue(1);
+		transicionEntrada.setToValue(0);
+		transicionEntrada.setCycleCount(1);
+
+		return transicionEntrada;
+	}
+
+	private FadeTransition cerrarTransicion(ImageView imagen) {
+		transicionSalida = new FadeTransition(Duration.seconds(0.5), controladorMatchPuzzle.getImagen1());
+		transicionSalida.setFromValue(0);
+		transicionSalida.setToValue(1);
+		transicionSalida.setCycleCount(1);
+		return transicionSalida;
+
+	}
 
 }

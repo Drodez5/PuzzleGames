@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane prefHeight="500.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+<BorderPane prefHeight="500.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -19,56 +18,11 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="235.0" prefWidth="1100.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="235.0" prefWidth="312.0">
                      <children>
-                        <ImageView fx:id="resultImagen1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fx:id="resultImagen2" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fx:id="resultImagen3" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fx:id="resultImagen4" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER" layoutX="60.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fx:id="resultImagen5" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER" layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fx:id="resultImagen6" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER" layoutX="160.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fx:id="resultImagen7" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER" layoutX="160.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fx:id="resultImagen8" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER" layoutX="185.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fx:id="resultImagen9" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER" layoutX="960.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fx:id="resultImagen10" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="resultImagen1" fitHeight="236.0" fitWidth="313.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </VBox>
                </children>

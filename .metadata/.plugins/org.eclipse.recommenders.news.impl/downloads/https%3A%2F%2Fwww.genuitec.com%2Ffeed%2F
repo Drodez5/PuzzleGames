@@ -12,12 +12,30 @@
 	<atom:link href="https://www.genuitec.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.genuitec.com</link>
 	<description>The Cloud Control Company</description>
-	<lastBuildDate>Tue, 27 Feb 2018 18:33:28 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 03 Mar 2018 05:02:50 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=4.9.2</generator>
 	<item>
+		<title>CodeMix &#8211; A Genesis</title>
+		<link>https://www.genuitec.com/codemix-a-genesis/</link>
+		<pubDate>Thu, 01 Mar 2018 15:57:31 +0000</pubDate>
+		<dc:creator><![CDATA[timwebb]]></dc:creator>
+				<category><![CDATA[Eclipse]]></category>
+		<category><![CDATA[Genuitec]]></category>
+		<category><![CDATA[MyEclipse]]></category>
+		<category><![CDATA[Programming Tips]]></category>
+		<category><![CDATA[Webclipse]]></category>
+		<category><![CDATA[codemix]]></category>
+		<category><![CDATA[VS code]]></category>
+
+		<guid isPermaLink="false">https://www.genuitec.com/?p=559248</guid>
+		<description><![CDATA[<p>What if we could give Eclipse developers access to the rich catalog of VS Code extensions and advanced development that Code offers? And that’s when CodeMix was born. By providing VS Code smarts inside Eclipse, we no longer have to play catch-up, and our customers can realize the benefits and combined effect Code &#038; Eclipse provide with all the great advances in the technology world.</p>
+<p>The post <a rel="nofollow" href="https://www.genuitec.com/codemix-a-genesis/">CodeMix &#8211; A Genesis</a> appeared first on <a rel="nofollow" href="https://www.genuitec.com">Genuitec</a>.</p>
+]]></description>
+		</item>
+		<item>
 		<title>Angular Observables and Promises &#8211; How to Use Them</title>
 		<link>https://www.genuitec.com/angular-observables-and-promises/</link>
 		<pubDate>Wed, 21 Feb 2018 14:43:29 +0000</pubDate>
@@ -289,24 +307,6 @@
 <p>The post <a rel="nofollow" href="https://www.genuitec.com/devstyle-rebooting-eclipses-ux/">Introducing DevStyle &#8211; Rebooting Eclipse&#8217;s UX</a> appeared first on <a rel="nofollow" href="https://www.genuitec.com">Genuitec</a>.</p>
 ]]></description>
 		</item>
-		<item>
-		<title>2017 CI 9 &#8211; Decking up for the Holidays with DevStyle and More!</title>
-		<link>https://www.genuitec.com/2017-ci-9-decking-holidays-devstyle/</link>
-		<pubDate>Thu, 30 Nov 2017 16:06:55 +0000</pubDate>
-		<dc:creator><![CDATA[Wanda Muriy]]></dc:creator>
-				<category><![CDATA[Eclipse]]></category>
-		<category><![CDATA[Genuitec]]></category>
-		<category><![CDATA[MyEclipse]]></category>
-		<category><![CDATA[Programming Tips]]></category>
-		<category><![CDATA[Webclipse]]></category>
-		<category><![CDATA[2017 CI 9 release]]></category>
-		<category><![CDATA[software updates]]></category>
-
-		<guid isPermaLink="false">https://www.genuitec.com/?p=541401</guid>
-		<description><![CDATA[<p>Malls across many countries are not the only places getting decked up for the holidays &#8211; we are getting into a pre-holiday mood ourselves with our latest release. Many improvements are included in our 2017 CI 9 release, both for our MyEclipse users, and for those who prefer Webclipse or Angular IDE. We are happy [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://www.genuitec.com/2017-ci-9-decking-holidays-devstyle/">2017 CI 9 &#8211; Decking up for the Holidays with DevStyle and More!</a> appeared first on <a rel="nofollow" href="https://www.genuitec.com">Genuitec</a>.</p>
-]]></description>
-		</item>
 	</channel>
 </rss>
 
@@ -315,7 +315,7 @@ Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/pro
 
 Page Caching using disk: enhanced (SSL caching disabled) 
 Content Delivery Network via resources.cloud.genuitec.com
-Database Caching 89/148 queries in 1.322 seconds using disk
+Database Caching 142/145 queries in 0.018 seconds using disk
 
-Served from: www.genuitec.com @ 2018-02-27 15:05:54 by W3 Total Cache
+Served from: www.genuitec.com @ 2018-03-03 04:55:44 by W3 Total Cache
 -->

@@ -11,6 +11,12 @@ import java.util.ArrayList;
 import javax.imageio.ImageIO;
 
 
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
 
 public class Utilidades {
 
@@ -30,8 +36,7 @@ public class Utilidades {
 			for (int i = 0; i <= archivos.length - 1; i++) {
 
 				// si son imagenes las mete
-				if (archivos[i].getName().endsWith(".jpg") | archivos[i].getName().endsWith(".png")
-						| archivos[i].getName().endsWith(".jpeg")) {
+				if (archivos[i].getName().endsWith(".jpg") | archivos[i].getName().endsWith(".png")) {
 					imagenes.add(archivos[i]);
 
 				}
@@ -44,6 +49,20 @@ public class Utilidades {
 			}
 
 		}
+		return imagenes;
+
+	}
+
+	public ArrayList<Image> cargaMatches() {
+
+		ArrayList<Image> imagenes = new ArrayList<>();
+
+		for (int i = 0; i <= 7; i++) {
+			Image imagen = new Image("/dad/puzzlegames/resources/matches/img" + i + ".gif"); // parametros add ,800,500,false,false
+			imagenes.add(imagen);
+
+		}
+
 		return imagenes;
 
 	}
@@ -116,7 +135,6 @@ public class Utilidades {
 		}
 		System.out.println("Recorte realizado con éxito");
 
-		// writing mini images into image files
 		File piezas = new File("\\piezas");
 		piezas.mkdirs();
 
@@ -127,8 +145,33 @@ public class Utilidades {
 		}
 		System.out.println("Mini imagenes creadas con éxito.");
 	}
-	
-	
 
+	// OPCION NO DISPONIBLE
+	public void noDisponibleDialog(Stage appStage) {
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("No se encuentra disponible");
+		alert.setHeaderText("La opción que buscas no se encuentra disponible.");
+		alert.setContentText("No esta disponible para la versión demo.");
+		alert.initOwner(appStage);
+
+		alert.showAndWait();
+	}
+
+	// IMAGENES INSUFICIENTES
+	public void imagenesInsuficientesDialog(Stage appStage) {
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setTitle("Error");
+		alert.setHeaderText("Número de imagenes insuficiente");
+		alert.setContentText(
+				"Al parecer has establecido, mayor número de rondas, que imagenes tienes en la carpeta especificada.\nBaja el número de rondas o coloca más imagenes");
+		alert.initOwner(appStage);
+		alert.initModality(Modality.APPLICATION_MODAL);
+		alert.showAndWait();
+		
+		
+
+	}
+	
+	
 
 }

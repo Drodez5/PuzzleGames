@@ -16,6 +16,13 @@
 	-fx-effect: dropshadow(gaussian,darkgray,3,3,3,3) ;
 }
 
+
+#tituloMP{
+	-fx-font-family: 'Impact';
+	-fx-font-size: 20pt;
+	-fx-effect: dropshadow(gaussian,darkgray,3,3,3,3) ;
+}
+
 .button {
 	-fx-background-color: black;
 	-fx-font-size: 15pt;

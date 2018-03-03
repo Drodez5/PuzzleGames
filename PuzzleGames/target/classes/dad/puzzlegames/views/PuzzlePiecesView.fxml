@@ -71,13 +71,13 @@
          <children>
             <ImageView fx:id="imagen1Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg1Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" />
             <ImageView fx:id="imagen2Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg2Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.columnIndex="1" />
-            <ImageView fx:id="imagen3Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg4Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.rowIndex="1" />
-            <ImageView fx:id="imagen4Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg5Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ImageView fx:id="imagen5Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg7Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.rowIndex="2" />
-            <ImageView fx:id="imagen6Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg8Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ImageView fx:id="imagen7Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg6Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <ImageView fx:id="imagen8Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg9Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <ImageView fx:id="imagen9Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg3Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.columnIndex="2" />
+            <ImageView fx:id="imagen4Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg4Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.rowIndex="1" />
+            <ImageView fx:id="imagen5Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg5Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fx:id="imagen7Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg7Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.rowIndex="2" />
+            <ImageView fx:id="imagen8Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg8Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fx:id="imagen6Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg6Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ImageView fx:id="imagen9Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg9Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ImageView fx:id="imagen3Tab" fitHeight="225.0" fitWidth="212.0" onDragDropped="#handleDragDroppedImg3Tab" onDragOver="#handleDragOverTab" pickOnBounds="true" GridPane.columnIndex="2" />
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

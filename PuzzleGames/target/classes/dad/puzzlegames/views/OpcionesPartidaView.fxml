@@ -16,7 +16,7 @@
    <top>
       <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="tituloOpciones" text="PuzzleGames" />
+            <Label fx:id="tituloOpciones" text="PUZZLEGAMES" />
             <Label fx:id="subTituloOpciones" text="Opciones de Partida">
                <VBox.margin>
                   <Insets bottom="60.0" />

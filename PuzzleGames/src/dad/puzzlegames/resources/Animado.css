@@ -22,7 +22,14 @@
 	-fx-text-fill:white;
 	-fx-effect: dropshadow(gaussian,black,3,3,3,3) ;
 }
-#tableroPP, #tableroPiezas{
+
+#tituloMP{
+	-fx-font-family: 'Impact';
+	-fx-font-size: 20pt;
+	-fx-text-fill:white;
+	-fx-effect: dropshadow(gaussian,black,3,3,3,3) ;
+}
+#tableroPP, #tableroPiezas,#tableroMatch{
 	-fx-background-color:whitesmoke ;
 	-fx-border-color: black;
 	-fx-border-radius: 10px;

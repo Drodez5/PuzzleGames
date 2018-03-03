@@ -132,6 +132,16 @@ public class MarcadorController implements Initializable {
 	public void setIdColumn(TableColumn<?, ?> idColumn) {
 		this.idColumn = idColumn;
 	}
+	
+	
+
+	public Button getGenerarInformeButton() {
+		return generarInformeButton;
+	}
+
+	public void setGenerarInformeButton(Button generarInformeButton) {
+		this.generarInformeButton = generarInformeButton;
+	}
 
 	public TableColumn<?, ?> getNombreColumn() {
 		return nombreColumn;
