@@ -44,3 +44,4 @@ Si seleccionamos  el *modo de juego Match Puzzle y la dificultad media*, nos deb
 
 
 
+Si seleccionamos el modo de juego Sliding Puzzle, en su modalidad fácil, nos cargará un tablero como el que veremos a continuación.
