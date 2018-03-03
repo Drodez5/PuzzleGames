@@ -12,36 +12,36 @@ Por cada botón del menú que hagas clic, saldrá una ventana que te muestra las
 
 El **botón de apariencia** situado en la parte superior izquierda, nos permite cambiar el estilo de la interfaz aún estilo más oscuro (EMO) o más animado (ANIMADO), dependiendo de los gustos del jugador.
 
-![](mockup/botonTema.jpg)
+![](mockup/botonTema.JPG)
 
 El **botón de sonido** esta situado en la parte superior derecha, nos permite *habilitar/deshabilitar* la música de la aplicación.
 
-![](mockup/sonido_on.jpg)
+![](mockup/sonido_on.JPG)
 
-![](mockup/sonido_off.jpg)
+![](mockup/sonido_off.JPG)
 
 El **botón about**,  muestra el nombre del desarrollador de la aplicación.
 
-![](mockup/About.jpg)
+![](mockup/About.JPG)
 
 El **botón salir**, muestra un cuadro de diálogo indicando si realmente se quiere salir de la aplicación, si la respuesta es positiva, sale de la aplicación.
 
-![](mockup/salir.jpg)
+![](mockup/salir.JPG)
 
 El **botón jugar**, nos lleva a las opciones de partida, donde configuraremos las opciones de la partida, dependiendo de las características que seleccionemos nos cargará un tipo de partida u otro.
 
-![](mockup/opcionespartida.jpg)
+![](mockup/opcionespartida.JPG)
 
 Si seleccionamos el *modo de juego Puzzle Pieces y la dificultad fácil*, nos debe cargar un tablero como el que vemos a continuación.
 
-![](mockup/tableropuzzlepieces.jpg)
+![](mockup/tableropuzzlepieces.JPG)
 
 Si seleccionamos  el *modo de juego Match Puzzle y la dificultad media*, nos debe cargar un tablero como el que veremos a continuación.
 
-![](mockup/tableromatchpuzzle.jpg)
+![](mockup/tableromatchpuzzle.JPG)
 
 
 
 
 
-Si seleccionamos el modo de juego Sliding Puzzle, en su modalidad fácil, nos cargará un tablero como el que veremos a continuación.
+Si seleccionamos el modo de juego Sliding Puzzle, en su modalidad fácil, nos cargará un tablero como el que veremos a continuación. aqui va tablero sliding
