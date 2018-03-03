@@ -12,10 +12,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane fx:id="vista" minHeight="900.0" minWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+<BorderPane fx:id="vista" minHeight="900.0" minWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <GridPane fx:id="tableroSliding" hgap="10.0" vgap="10.0" BorderPane.alignment="CENTER">
+      <GridPane fx:id="tableroSliding" vgap="10.0" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -27,47 +26,47 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fx:id="imagen1Tab" fitHeight="233.0" fitWidth="366.0" pickOnBounds="true">
+            <ImageView fx:id="imagen1Tab" fitHeight="225.0" fitWidth="355.0" pickOnBounds="true">
                <image>
                   <Image url="@../resources/interrogation.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imagen2Tab" fitHeight="233.0" fitWidth="366.0" pickOnBounds="true" GridPane.columnIndex="1">
+            <ImageView fx:id="imagen2Tab" fitHeight="225.0" fitWidth="355.0" pickOnBounds="true" GridPane.columnIndex="1">
                <image>
                   <Image url="@../resources/interrogation.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imagen3Tab" fitHeight="233.0" fitWidth="366.0" pickOnBounds="true" GridPane.columnIndex="2">
+            <ImageView fx:id="imagen3Tab" fitHeight="225.0" fitWidth="355.0" pickOnBounds="true" GridPane.columnIndex="2">
                <image>
                   <Image url="@../resources/interrogation.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imagen4Tab" fitHeight="233.0" fitWidth="366.0" pickOnBounds="true" GridPane.rowIndex="1">
+            <ImageView fx:id="imagen4Tab" fitHeight="225.0" fitWidth="355.0" pickOnBounds="true" GridPane.rowIndex="1">
                <image>
                   <Image url="@../resources/interrogation.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imagen5Tab" fitHeight="233.0" fitWidth="366.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <ImageView fx:id="imagen5Tab" fitHeight="225.0" fitWidth="355.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <image>
                   <Image url="@../resources/interrogation.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imagen6Tab" fitHeight="233.0" fitWidth="366.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <ImageView fx:id="imagen6Tab" fitHeight="225.0" fitWidth="355.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <image>
                   <Image url="@../resources/interrogation.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imagen7Tab" fitHeight="233.0" fitWidth="366.0" pickOnBounds="true" GridPane.rowIndex="2">
+            <ImageView fx:id="imagen7Tab" fitHeight="225.0" fitWidth="355.0" pickOnBounds="true" GridPane.rowIndex="2">
                <image>
                   <Image url="@../resources/interrogation.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imagen8Tab" fitHeight="233.0" fitWidth="366.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <ImageView fx:id="imagen8Tab" fitHeight="225.0" fitWidth="355.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <image>
                   <Image url="@../resources/interrogation.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imagen9Tab" fitHeight="233.0" fitWidth="366.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <ImageView fx:id="imagen9Tab" fitHeight="225.0" fitWidth="355.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <image>
                   <Image url="@../resources/interrogation.jpg" />
                </image>
@@ -81,12 +80,16 @@
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" spacing="150.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <VBox alignment="CENTER" prefHeight="80.0" prefWidth="270.0">
                <children>
-                  <Label text="PUZZLEGAMES" />
+                  <HBox alignment="CENTER" prefHeight="80.0" prefWidth="135.0">
+                     <children>
+                        <Label fx:id="tituloPartida" text="PUZZLEGAMES" />
+                     </children>
+                  </HBox>
                </children>
             </VBox>
-            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="218.0">
+            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="141.0">
                <children>
                   <Label text="Jugador" />
                   <Label fx:id="jugadorLabel" text="&lt;&lt;jugadorLabel&gt;&gt;" />

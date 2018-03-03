@@ -23,6 +23,12 @@
 	-fx-effect: dropshadow(gaussian,darkgray,3,3,3,3) ;
 }
 
+#tableroPP, #tableroPiezas,#tableroMatch,#tableroSliding{
+	-fx-background-color:whitesmoke ;
+	-fx-border-color: black;
+	-fx-border-radius: 10px;
+}
+
 .button {
 	-fx-background-color: black;
 	-fx-font-size: 15pt;

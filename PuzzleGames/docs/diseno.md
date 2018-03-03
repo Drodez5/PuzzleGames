@@ -14,6 +14,8 @@ El **botón de apariencia** situado en la parte superior izquierda, nos permite 
 
 ![](mockup/botonTema.JPG)
 
+![](/mockup/menuprincipalemo.JPG)
+
 El **botón de sonido** esta situado en la parte superior derecha, nos permite *habilitar/deshabilitar* la música de la aplicación.
 
 ![](mockup/sonido_on.JPG)
@@ -44,4 +46,8 @@ Si seleccionamos  el *modo de juego Match Puzzle y la dificultad media*, nos deb
 
 
 
-Si seleccionamos el modo de juego Sliding Puzzle, en su modalidad fácil, nos cargará un tablero como el que veremos a continuación. aqui va tablero sliding
+Si seleccionamos el modo de juego Sliding Puzzle, en su modalidad fácil, nos cargará un tablero como el que veremos a continuación. 
+
+
+
+![](mockup/tableroSlidingPuzzle.JPG)

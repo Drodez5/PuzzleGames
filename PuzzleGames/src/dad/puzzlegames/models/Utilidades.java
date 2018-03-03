@@ -120,13 +120,10 @@ public class Utilidades {
 		int anchoRecorte = image.getWidth() / columnas;
 		int altoRecorte = image.getHeight() / filas;
 		int count = 0;
-		BufferedImage imgs[] = new BufferedImage[recorte]; // Image array to hold image chunks
+		BufferedImage imgs[] = new BufferedImage[recorte]; 
 		for (int x = 0; x < filas; x++) {
 			for (int y = 0; y < columnas; y++) {
-				// Initialize the image array with image chunks
 				imgs[count] = new BufferedImage(anchoRecorte, altoRecorte, image.getType());
-
-				// draws the image chunk
 				Graphics2D gr = imgs[count++].createGraphics();
 				gr.drawImage(image, 0, 0, anchoRecorte, altoRecorte, anchoRecorte * y, altoRecorte * x,
 						anchoRecorte * y + anchoRecorte, altoRecorte * x + altoRecorte, null);

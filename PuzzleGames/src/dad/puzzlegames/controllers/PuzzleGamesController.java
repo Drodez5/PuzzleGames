@@ -47,6 +47,7 @@ public class PuzzleGamesController implements Initializable {
 	private MarcadorController controladorMarcador;
 	private PuzzlePiecesController controladorPuzzlePieces;
 	private MatchPuzzleController controladorMatchPuzzle;
+	private SlidingPuzzleController controladorSlidingPuzzle;
 	private BorderPane vista;
 	private Stage appStage;
 
@@ -65,6 +66,8 @@ public class PuzzleGamesController implements Initializable {
 	private int clic = 0;
 	private int clic1 = -1;
 	private int clic2 = -1;
+	
+	private Image comodin;
 
 	private FadeTransition transicionEntrada, transicionSalida;
 
@@ -84,6 +87,7 @@ public class PuzzleGamesController implements Initializable {
 		controladorMarcador = new MarcadorController();
 		controladorPuzzlePieces = new PuzzlePiecesController();
 		controladorMatchPuzzle = new MatchPuzzleController();
+		controladorSlidingPuzzle = new SlidingPuzzleController();
 
 		vista = new BorderPane();
 		vista.setCenter(new ImageView("/dad/puzzlegames/resources/splashimage.jpg"));
@@ -148,6 +152,11 @@ public class PuzzleGamesController implements Initializable {
 		// CONTROLADOR PUZZLE PIECES
 		controladorPuzzlePieces.getAbandonarButton().setOnAction(e -> onAbandonarButtonAction(e));
 		controladorPuzzlePieces.getSiguienteButton().setOnAction(e -> onTerminarButtonAction(e));
+		
+		// CONTROLADOR SLIDING PUZZLE
+		controladorSlidingPuzzle.getAbandonarButton().setOnAction(e -> onAbandonarButtonAction(e));
+		controladorSlidingPuzzle.getSiguienteButton().setOnAction(e -> onTerminarButtonAction(e));
+		
 		
 		
 
@@ -336,6 +345,10 @@ public class PuzzleGamesController implements Initializable {
 				System.out.println("SLIDING PUZZLE");
 				this.sec = tiempoFacil;
 				cuentaAtras();
+				if(recolectaImagenes()==true) {
+					iniciarPartidaSlidingPuzzleFacil(jugadorNuevo);
+					
+				}
 
 				break;
 
@@ -407,6 +420,164 @@ public class PuzzleGamesController implements Initializable {
 			break;
 		}
 
+	}
+
+	private void iniciarPartidaSlidingPuzzleFacil(Jugador jugadorNuevo2) {
+		
+		controladorSlidingPuzzle.getJugadorLabel().setText(jugadorNuevo.getNombre());
+		controladorSlidingPuzzle.getRondasLabel().setText(rondaActual + "");
+		
+		
+		comodin= new Image("/dad/puzzlegames/resources/hole.png");
+		
+		try {
+			util.trozeaImagenes(imagenes.get(rondaActual), Dificultad.FACIL);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		for (int i = 0; i < 9; i++) {
+			Image imagen = new Image(new File("\\piezas\\img" + i + ".jpg").toURI().toString());
+			imagenesPiezes.add(imagen);
+
+		}
+		controladorSlidingPuzzle.getImagen1Tab().setImage(imagenesPiezes.get(0));
+		controladorSlidingPuzzle.getImagen2Tab().setImage(imagenesPiezes.get(1));
+		controladorSlidingPuzzle.getImagen3Tab().setImage(imagenesPiezes.get(2));
+		controladorSlidingPuzzle.getImagen4Tab().setImage(imagenesPiezes.get(3));
+		controladorSlidingPuzzle.getImagen5Tab().setImage(imagenesPiezes.get(4));
+		controladorSlidingPuzzle.getImagen6Tab().setImage(imagenesPiezes.get(5));
+		controladorSlidingPuzzle.getImagen7Tab().setImage(comodin);
+		controladorSlidingPuzzle.getImagen8Tab().setImage(imagenesPiezes.get(7));
+		controladorSlidingPuzzle.getImagen9Tab().setImage(imagenesPiezes.get(8));
+		
+		clic=7;
+		
+		controladorSlidingPuzzle.getImagen1Tab().setOnMouseClicked(e->comprobarDespazamiento(1));
+		controladorSlidingPuzzle.getImagen2Tab().setOnMouseClicked(e->comprobarDespazamiento(2));
+		controladorSlidingPuzzle.getImagen3Tab().setOnMouseClicked(e->comprobarDespazamiento(3));
+		controladorSlidingPuzzle.getImagen4Tab().setOnMouseClicked(e->comprobarDespazamiento(4));
+		controladorSlidingPuzzle.getImagen5Tab().setOnMouseClicked(e->comprobarDespazamiento(5));
+		controladorSlidingPuzzle.getImagen6Tab().setOnMouseClicked(e->comprobarDespazamiento(6));
+		controladorSlidingPuzzle.getImagen7Tab().setOnMouseClicked(e->comprobarDespazamiento(7));
+		controladorSlidingPuzzle.getImagen8Tab().setOnMouseClicked(e->comprobarDespazamiento(8));
+		controladorSlidingPuzzle.getImagen9Tab().setOnMouseClicked(e->comprobarDespazamiento(9));
+		
+		vista.setCenter(controladorSlidingPuzzle.getVista());
+		
+	}
+
+	private void comprobarDespazamiento(int desplazamiento) {
+		clic1=desplazamiento;
+		if(clic==7 && clic1==8) {
+			controladorSlidingPuzzle.getImagen8Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen7Tab().setImage(imagenesPiezes.get(7));
+			clic=8;
+		} else if(clic==8 && clic1==7) {
+			controladorSlidingPuzzle.getImagen7Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen8Tab().setImage(imagenesPiezes.get(7));
+			clic=7;		
+		} else if(clic==7 && clic1==4) {
+			controladorSlidingPuzzle.getImagen4Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen7Tab().setImage(imagenesPiezes.get(3));
+			clic=4;
+		} else if(clic==4 && clic1==7) {
+			controladorSlidingPuzzle.getImagen7Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen4Tab().setImage(imagenesPiezes.get(3));
+			clic=7;	
+		} else if(clic==8 && clic1==9) {
+			controladorSlidingPuzzle.getImagen9Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen8Tab().setImage(imagenesPiezes.get(8));
+			clic=9;
+			
+		} else if(clic==9 && clic1==8) {
+			controladorSlidingPuzzle.getImagen8Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen9Tab().setImage(imagenesPiezes.get(8));
+			clic=8;
+			
+		} else if(clic==9 && clic1==6) {
+			controladorSlidingPuzzle.getImagen6Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen9Tab().setImage(imagenesPiezes.get(5));
+			clic=6;
+			
+		} else if(clic==6 && clic1==9) {
+			controladorSlidingPuzzle.getImagen9Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen6Tab().setImage(imagenesPiezes.get(5));
+			clic=9;
+			
+		} else if(clic==6 && clic1==3) {
+			controladorSlidingPuzzle.getImagen3Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen6Tab().setImage(imagenesPiezes.get(2));
+			clic=3;
+		} else if(clic==3 && clic1==6) {
+			controladorSlidingPuzzle.getImagen6Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen3Tab().setImage(imagenesPiezes.get(2));
+			clic=6;
+			
+		} else if(clic==3 && clic1==2) {
+			controladorSlidingPuzzle.getImagen2Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen3Tab().setImage(imagenesPiezes.get(1));
+			clic=2;
+			
+		} else if(clic==2 && clic1==3) {
+			controladorSlidingPuzzle.getImagen3Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen2Tab().setImage(imagenesPiezes.get(1));
+			clic=3;
+		} else if(clic==2 && clic1==1) {
+			controladorSlidingPuzzle.getImagen1Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen2Tab().setImage(imagenesPiezes.get(0));
+			clic=1;	
+		} else if(clic==1 && clic1==2) {
+			controladorSlidingPuzzle.getImagen2Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen1Tab().setImage(imagenesPiezes.get(0));
+			clic=2;
+			
+		}else if(clic==1 && clic1==4) {
+			controladorSlidingPuzzle.getImagen4Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen1Tab().setImage(imagenesPiezes.get(3));
+			clic=4;
+			
+		} else if(clic==4 && clic1==1) {
+			controladorSlidingPuzzle.getImagen1Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen4Tab().setImage(imagenesPiezes.get(3));
+			clic=1;
+			
+		} else if(clic==2 && clic1==5) {
+			controladorSlidingPuzzle.getImagen5Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen2Tab().setImage(imagenesPiezes.get(1));
+			clic=5;
+		} else if(clic==5 && clic1==2) {
+			controladorSlidingPuzzle.getImagen2Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen5Tab().setImage(imagenesPiezes.get(1));
+			clic=2;
+		} else if(clic==5 && clic1==4) {
+			controladorSlidingPuzzle.getImagen4Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen5Tab().setImage(imagenesPiezes.get(3));
+			clic=4;
+		} else if(clic==4 && clic1==5) {
+			controladorSlidingPuzzle.getImagen5Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen4Tab().setImage(imagenesPiezes.get(3));
+			clic=5;
+		} else if(clic==5 && clic1==6) {
+			controladorSlidingPuzzle.getImagen6Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen5Tab().setImage(imagenesPiezes.get(4));
+			clic=6;
+		} else if(clic==6 && clic1==5) {
+			controladorSlidingPuzzle.getImagen6Tab().setImage(imagenesPiezes.get(5));
+			controladorSlidingPuzzle.getImagen5Tab().setImage(comodin);
+			clic=5;
+			
+		} else if(clic==5 && clic1==8) {
+			controladorSlidingPuzzle.getImagen8Tab().setImage(comodin);
+			controladorSlidingPuzzle.getImagen5Tab().setImage(imagenesPiezes.get(7));
+			clic=8;	
+		} else if (clic==8 && clic1==5) {
+			controladorSlidingPuzzle.getImagen8Tab().setImage(imagenesPiezes.get(4));
+			controladorSlidingPuzzle.getImagen5Tab().setImage(comodin);
+			clic=5;
+			
+		}
+		
 	}
 
 	/**
@@ -1048,7 +1219,7 @@ public class PuzzleGamesController implements Initializable {
 	}
 
 	private FadeTransition abrirTransicion(ImageView imagen) {
-		transicionEntrada = new FadeTransition(Duration.seconds(0.5), controladorMatchPuzzle.getImagen1());
+		transicionEntrada = new FadeTransition(Duration.seconds(0.5), imagen);
 		transicionEntrada.setFromValue(1);
 		transicionEntrada.setToValue(0);
 		transicionEntrada.setCycleCount(1);
@@ -1057,7 +1228,7 @@ public class PuzzleGamesController implements Initializable {
 	}
 
 	private FadeTransition cerrarTransicion(ImageView imagen) {
-		transicionSalida = new FadeTransition(Duration.seconds(0.5), controladorMatchPuzzle.getImagen1());
+		transicionSalida = new FadeTransition(Duration.seconds(0.5), imagen);
 		transicionSalida.setFromValue(0);
 		transicionSalida.setToValue(1);
 		transicionSalida.setCycleCount(1);
