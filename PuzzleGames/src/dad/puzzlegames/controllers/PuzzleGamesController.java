@@ -48,6 +48,8 @@ public class PuzzleGamesController implements Initializable {
 	private PuzzlePiecesController controladorPuzzlePieces;
 	private MatchPuzzleController controladorMatchPuzzle;
 	private SlidingPuzzleController controladorSlidingPuzzle;
+	private ResultadosController controladorResultados;
+	
 	private BorderPane vista;
 	private Stage appStage;
 
@@ -60,6 +62,7 @@ public class PuzzleGamesController implements Initializable {
 
 	private ArrayList<File> imagenes;
 	private ArrayList<Image> imagenesMatch, imagenesPiezes;
+	private ArrayList<Integer> resultados;
 	private Timeline tiempo;
 	private AudioClip audio;
 
@@ -67,7 +70,9 @@ public class PuzzleGamesController implements Initializable {
 	private int clic1 = -1;
 	private int clic2 = -1;
 	
-	private Image comodin;
+	
+	
+	private Image comodin,interrogation;
 
 	private FadeTransition transicionEntrada, transicionSalida;
 
@@ -88,6 +93,7 @@ public class PuzzleGamesController implements Initializable {
 		controladorPuzzlePieces = new PuzzlePiecesController();
 		controladorMatchPuzzle = new MatchPuzzleController();
 		controladorSlidingPuzzle = new SlidingPuzzleController();
+		controladorResultados = new ResultadosController();
 
 		vista = new BorderPane();
 		vista.setCenter(new ImageView("/dad/puzzlegames/resources/splashimage.jpg"));
@@ -109,6 +115,7 @@ public class PuzzleGamesController implements Initializable {
 	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		interrogation = new Image("/dad/puzzlegames/resources/interrogation.jpg");
 		// INSTANCIAS E INICIALIZACIONES
 		audio = new AudioClip(getClass().getResource("/dad/puzzlegames/resources/openingIntro.mp3").toExternalForm());
 		jugadorNuevo = new Jugador();
@@ -116,6 +123,8 @@ public class PuzzleGamesController implements Initializable {
 		imagenes = new ArrayList<>();
 		imagenesMatch = util.cargaMatches();
 		imagenesPiezes = new ArrayList<>();
+		resultados= new ArrayList<>();
+		
 		audio.play();
 
 		controladorOpciones.getJuegoCombo().setOnAction(e -> {
@@ -157,8 +166,8 @@ public class PuzzleGamesController implements Initializable {
 		controladorSlidingPuzzle.getAbandonarButton().setOnAction(e -> onAbandonarButtonAction(e));
 		controladorSlidingPuzzle.getSiguienteButton().setOnAction(e -> onTerminarButtonAction(e));
 		
-		
-		
+		//CONTROLADOR RESULTADOS
+		controladorResultados.getContinuarButton().setOnAction(e-> volverAMenu());
 
 		// BINDEOS
 		controladorOpciones.getContinuarButton().disableProperty()
@@ -173,6 +182,10 @@ public class PuzzleGamesController implements Initializable {
 	/*
 	 * Metodo de terminar
 	 * 
+	 * Este metodo muestra los resultados de la partida,
+	 * si la partida ha sido favorable mostrará un resultado 
+	 * y si no otro
+	 * 
 	 * @param ActionEvent e
 	 * 
 	 */
@@ -181,7 +194,17 @@ public class PuzzleGamesController implements Initializable {
 		tiempo.stop();
 		if (compruebaPuzzles() == true) {
 			System.out.println("La victoria es nuestra");
+			vista.setCenter(controladorResultados.getVista());
+			controladorResultados.getResultImagen1().setImage(new Image("/dad/puzzlegames/resources/ok.png"));
+			controladorResultados.getResultadoLabel().setText("Victoria");
+			
 		} else {
+			
+			vista.setCenter(controladorResultados.getVista());
+			controladorResultados.getResultImagen1().setImage(new Image("/dad/puzzlegames/resources/fail.png"));
+			controladorResultados.getResultadoLabel().setText("Game Over");
+			
+			
 			System.out.println("La derrota yacerá sobre tu tumba");
 		}
 
@@ -190,9 +213,9 @@ public class PuzzleGamesController implements Initializable {
 	/**
 	 * Metodo de sonido
 	 * 
-	 * @param ActionEvent
-	 *            e
+	 * Este metodo permite habilitar/deshabilitar el sonido
 	 * 
+	 * @param ActionEvent           
 	 */
 	private void onSonidoButtonAction(ActionEvent e) {
 		if (audio.isPlaying()) {
@@ -210,9 +233,8 @@ public class PuzzleGamesController implements Initializable {
 	/**
 	 * Metodo de abandonar
 	 * 
+	 * Este metodo permite abandonar la partida
 	 * @param ActionEvent
-	 *            e
-	 * 
 	 */
 	private void onAbandonarButtonAction(ActionEvent e) {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
@@ -225,7 +247,8 @@ public class PuzzleGamesController implements Initializable {
 		Optional<ButtonType> result = alert.showAndWait();
 		if (result.get() == ButtonType.OK) {
 			audio.stop();
-			vista.setCenter(controladorMenu.getVista());
+			vista.setCenter(controladorResultados.getVista());
+			controladorResultados.getResultadoLabel().setText("Game Over");
 
 		}
 
@@ -234,6 +257,7 @@ public class PuzzleGamesController implements Initializable {
 	/**
 	 * Metodo de Tema
 	 * 
+	 * Este metodo permite cambiar de tema la aplicacion
 	 * @param ActionEvent
 	 */
 	private void onTemaButtonAction(ActionEvent e) {
@@ -276,6 +300,7 @@ public class PuzzleGamesController implements Initializable {
 
 	/**
 	 * Metodo cargar SplashScreen
+	 * Este metodo se encarga de cargar el SplashScreen
 	 */
 
 	private void loadSplashScreen() throws IOException {
@@ -305,6 +330,9 @@ public class PuzzleGamesController implements Initializable {
 
 	/**
 	 * Metodo de jugar
+	 * 
+	 * Se encarga de seleccionar el modo de juego
+	 * y la dificultad para poder iniciar la partida
 	 * 
 	 * @param ActionEvent
 	 */
@@ -421,7 +449,13 @@ public class PuzzleGamesController implements Initializable {
 		}
 
 	}
-
+/**
+ * Metodo iniciar Partida Sliding Puzzle Facil
+ * 
+ * Se encarga de iniciar la partida del Sliding Puzzle
+ * en la dificultad fácil
+ * @param jugadorNuevo
+ * */
 	private void iniciarPartidaSlidingPuzzleFacil(Jugador jugadorNuevo2) {
 		
 		controladorSlidingPuzzle.getJugadorLabel().setText(jugadorNuevo.getNombre());
@@ -431,7 +465,7 @@ public class PuzzleGamesController implements Initializable {
 		comodin= new Image("/dad/puzzlegames/resources/hole.png");
 		
 		try {
-			util.trozeaImagenes(imagenes.get(rondaActual), Dificultad.FACIL);
+			util.trozeaImagenes(imagenes.get(generaAleatorio()), Dificultad.FACIL);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -466,7 +500,13 @@ public class PuzzleGamesController implements Initializable {
 		vista.setCenter(controladorSlidingPuzzle.getVista());
 		
 	}
-
+	
+	/**
+	 * Comprobar desplazamientos
+	 * Este metodo se encarga de realizar
+	 *  los desplazamientos permitidos de las fichas
+	 *  @param desplazamiento
+	 *  */
 	private void comprobarDespazamiento(int desplazamiento) {
 		clic1=desplazamiento;
 		if(clic==7 && clic1==8) {
@@ -583,6 +623,9 @@ public class PuzzleGamesController implements Initializable {
 	/**
 	 * Metodo de iniciar partida
 	 * 
+	 * Este metodo inicia una nueva partida
+	 * en el modo de juego MatchPuzzle, dificultad Media
+	 * 
 	 * @param jugadorNuevo
 	 */
 	private void iniciarPartidaMatchPuzzle(Jugador jugadorNuevo) {
@@ -590,7 +633,7 @@ public class PuzzleGamesController implements Initializable {
 		controladorMatchPuzzle.getNamePlayerLabel().setText(jugadorNuevo.getNombre());
 		controladorMatchPuzzle.getRoundLabel().setText(rondaActual + "");
 
-		Image interrogation = new Image("/dad/puzzlegames/resources/interrogation.jpg");
+		
 
 		controladorMatchPuzzle.getImagen1().setOnMouseClicked(e -> {
 			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen1());
@@ -709,6 +752,8 @@ public class PuzzleGamesController implements Initializable {
 
 			transicionSalida.setOnFinished(a -> {
 				controladorMatchPuzzle.getImagen6().setImage(interrogation);
+				clic++;
+				compruebaClic(6);
 			});
 
 		});
@@ -925,6 +970,8 @@ public class PuzzleGamesController implements Initializable {
 	/**
 	 * Metodo de abrir
 	 * 
+	 * Se encarga de seleccionar un directorio de imagenes
+	 * 
 	 * @param ActionEvent
 	 */
 	private void onAbrirButtonAction(ActionEvent e) {
@@ -944,8 +991,9 @@ public class PuzzleGamesController implements Initializable {
 	/**
 	 * Metodo de volver
 	 * 
+	 * Se encarga de llamar al metodo volver a menu
 	 * @param ActionEvent
-	 *            e
+	 *            
 	 */
 	private void onAtrasButtonAction(ActionEvent e) {
 		volverAMenu();
@@ -955,7 +1003,7 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo para visualizar el marcador
 	 * 
 	 * @param ActionEvent
-	 *            e
+	 *            
 	 */
 	private void onMarcadorButtonAction(ActionEvent e) {
 		vista.setCenter(controladorMarcador.getVista());
@@ -965,7 +1013,7 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo para salir
 	 * 
 	 * @param ActionEvent
-	 *            e
+	 *            
 	 */
 	private void onSalirButtonAction(ActionEvent e) {
 		Alert alertExit = new Alert(AlertType.CONFIRMATION);
@@ -986,7 +1034,7 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo de acerca de
 	 * 
 	 * @param ActionEvent
-	 *            e
+	 *            
 	 */
 	private void onAcercaDeButtonAction(ActionEvent e) {
 		Dialog<Void> dialog = new Dialog<>();
@@ -1005,7 +1053,7 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo cambiar vista opciones
 	 * 
 	 * @param ActionEvent
-	 *            e
+	 *            
 	 */
 	private void onOpcionesPartidaButtonAction(ActionEvent e) {
 		vista.setCenter(controladorOpciones.getVista());
@@ -1021,7 +1069,8 @@ public class PuzzleGamesController implements Initializable {
 	private void iniciarPartidaPuzzlePiecesFacil(Jugador jugadorNuevo) {
 
 		try {
-			util.trozeaImagenes(imagenes.get(rondaActual), Dificultad.FACIL);
+			
+			util.trozeaImagenes(imagenes.get(generaAleatorio()), Dificultad.FACIL);
 
 			for (int i = 0; i < 9; i++) {
 				Image imagen = new Image(new File("\\piezas\\img" + i + ".jpg").toURI().toString());
@@ -1055,6 +1104,7 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo para volver a menu principal
 	 */
 	private void volverAMenu() {
+		reset();
 		vista.setCenter(controladorMenu.getVista());
 	}
 
@@ -1100,6 +1150,7 @@ public class PuzzleGamesController implements Initializable {
 				sec--;
 				controladorPuzzlePieces.getTiempoLabel().setText(util.convertirAMinutos(sec));
 				controladorMatchPuzzle.getTimeLabel().setText(util.convertirAMinutos(sec));
+				controladorSlidingPuzzle.getTiempoLabel().setText(util.convertirAMinutos(sec));
 
 				if (0 == sec) {
 					System.out.println("Game Over");
@@ -1117,8 +1168,8 @@ public class PuzzleGamesController implements Initializable {
 	/**
 	 * Metodo que comprueba y registra el clic
 	 * 
-	 * @param int
-	 *            cod
+	 * @param cod
+	 *            
 	 */
 	private void compruebaClic(int cod) {
 
@@ -1146,50 +1197,62 @@ public class PuzzleGamesController implements Initializable {
 
 	/**
 	 * Metodo de reolverMatch
+	 * 
+	 * Se encarga de voltear las parejas que son iguales
+	 * 
+	 * @param cod
 	 */
 	private void resolverMatch(int cod) {
 		switch (cod) {
 		case 1:
 			controladorMatchPuzzle.getImagen1().setImage(imagenesMatch.get(0));
 			controladorMatchPuzzle.getImagen13().setImage(imagenesMatch.get(0));
+			resultados.add(0);
 
 			break;
 
 		case 2:
 			controladorMatchPuzzle.getImagen2().setImage(imagenesMatch.get(1));
 			controladorMatchPuzzle.getImagen3().setImage(imagenesMatch.get(1));
+			resultados.add(1);
 
 			break;
 
 		case 3:
 			controladorMatchPuzzle.getImagen4().setImage(imagenesMatch.get(2));
 			controladorMatchPuzzle.getImagen15().setImage(imagenesMatch.get(2));
+			resultados.add(2);
 
 			break;
 
 		case 4:
 			controladorMatchPuzzle.getImagen14().setImage(imagenesMatch.get(3));
 			controladorMatchPuzzle.getImagen11().setImage(imagenesMatch.get(3));
+			resultados.add(3);
 			break;
 
 		case 5:
 			controladorMatchPuzzle.getImagen7().setImage(imagenesMatch.get(4));
 			controladorMatchPuzzle.getImagen8().setImage(imagenesMatch.get(4));
+			resultados.add(4);
 			break;
 
 		case 6:
 			controladorMatchPuzzle.getImagen6().setImage(imagenesMatch.get(5));
 			controladorMatchPuzzle.getImagen10().setImage(imagenesMatch.get(5));
+			resultados.add(5);
 			break;
 
 		case 7:
 			controladorMatchPuzzle.getImagen9().setImage(imagenesMatch.get(6));
 			controladorMatchPuzzle.getImagen16().setImage(imagenesMatch.get(6));
+			resultados.add(6);
 
 			break;
 		case 8:
 			controladorMatchPuzzle.getImagen5().setImage(imagenesMatch.get(7));
 			controladorMatchPuzzle.getImagen12().setImage(imagenesMatch.get(7));
+			resultados.add(7);
 
 			break;
 
@@ -1200,9 +1263,19 @@ public class PuzzleGamesController implements Initializable {
 	}
 
 	private boolean compruebaPuzzles() {
+		
+		System.out.println(resultados.size());
 		boolean puzzleCorrecto = false;
 
 		if (jugadorNuevo.getModo() == Modo.MATCH_PUZZLE) {
+			if(resultados.size()>8) {
+				
+				puzzleCorrecto=true;
+				
+			} else {
+				
+				puzzleCorrecto=false;
+			}
 
 		} else if (jugadorNuevo.getModo() == Modo.PUZZLE_PIECES) {
 
@@ -1218,6 +1291,11 @@ public class PuzzleGamesController implements Initializable {
 
 	}
 
+	/**
+	 * Metodo que inicia la transicion
+	 *  de la imagen enviada por parametro
+	 *  @param imagen
+	 *  */
 	private FadeTransition abrirTransicion(ImageView imagen) {
 		transicionEntrada = new FadeTransition(Duration.seconds(0.5), imagen);
 		transicionEntrada.setFromValue(1);
@@ -1226,6 +1304,12 @@ public class PuzzleGamesController implements Initializable {
 
 		return transicionEntrada;
 	}
+	
+	/**
+	 * Metodo que finaliza la transicion 
+	 * de la imagen enviada por parametro
+	 * 
+	 * @param imagen*/
 
 	private FadeTransition cerrarTransicion(ImageView imagen) {
 		transicionSalida = new FadeTransition(Duration.seconds(0.5), imagen);
@@ -1235,5 +1319,85 @@ public class PuzzleGamesController implements Initializable {
 		return transicionSalida;
 
 	}
+	
+	/**
+	 * Metodo de reseteo
+	 * resetea todas las opciones del juego
+	 * */
+	
+	private void reset() {
+		clic=0;
+		clic1=-1;
+		clic2=-1;
+		sec=0;
+		imagenesPiezes.clear();
+		jugadorNuevo.setDificultad("");
+		jugadorNuevo.setDirectorio("");
+		jugadorNuevo.setModo(Modo.PUZZLE_PIECES);
+		jugadorNuevo.setNombre("");
+		jugadorNuevo.setRondas(1);
+		
+		controladorMatchPuzzle.getImagen1().setImage(interrogation);
+		controladorMatchPuzzle.getImagen2().setImage(interrogation);
+		controladorMatchPuzzle.getImagen3().setImage(interrogation);
+		controladorMatchPuzzle.getImagen4().setImage(interrogation);
+		controladorMatchPuzzle.getImagen5().setImage(interrogation);
+		controladorMatchPuzzle.getImagen6().setImage(interrogation);
+		controladorMatchPuzzle.getImagen7().setImage(interrogation);
+		controladorMatchPuzzle.getImagen8().setImage(interrogation);
+		controladorMatchPuzzle.getImagen9().setImage(interrogation);
+		controladorMatchPuzzle.getImagen10().setImage(interrogation);
+		controladorMatchPuzzle.getImagen11().setImage(interrogation);
+		controladorMatchPuzzle.getImagen12().setImage(interrogation);
+		controladorMatchPuzzle.getImagen13().setImage(interrogation);
+		controladorMatchPuzzle.getImagen14().setImage(interrogation);
+		controladorMatchPuzzle.getImagen15().setImage(interrogation);
+		controladorMatchPuzzle.getImagen16().setImage(interrogation);
+		
+		controladorPuzzlePieces.getImagen1Tab().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen2Tab().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen3Tab().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen4Tab().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen5Tab().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen6Tab().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen7Tab().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen8Tab().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen9Tab().imageProperty().set(null);
+		
+		controladorPuzzlePieces.getImagen1Ficha().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen2Ficha().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen3Ficha().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen4Ficha().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen5Ficha().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen6Ficha().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen7Ficha().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen8Ficha().imageProperty().set(null);
+		controladorPuzzlePieces.getImagen9Ficha().imageProperty().set(null);
+		
+		controladorSlidingPuzzle.getImagen1Tab().imageProperty().set(null);
+		controladorSlidingPuzzle.getImagen2Tab().imageProperty().set(null);
+		controladorSlidingPuzzle.getImagen3Tab().imageProperty().set(null);
+		controladorSlidingPuzzle.getImagen4Tab().imageProperty().set(null);
+		controladorSlidingPuzzle.getImagen5Tab().imageProperty().set(null);
+		controladorSlidingPuzzle.getImagen6Tab().imageProperty().set(null);
+		controladorSlidingPuzzle.getImagen7Tab().imageProperty().set(null);
+		controladorSlidingPuzzle.getImagen8Tab().imageProperty().set(null);
+		controladorSlidingPuzzle.getImagen9Tab().imageProperty().set(null);
+		
+		controladorOpciones.getNombreText().setText("");
+		controladorOpciones.getDificultadCombo().setValue(Dificultad.FACIL);
+		controladorOpciones.getRondasCombo().setValue(1);
+		controladorOpciones.getJuegoCombo().setValue(Modo.PUZZLE_PIECES);
+		controladorOpciones.getDirectorioLabel().setText("<<Directorio>>");
+		
+	}
+	
+	/**
+	 * Metodo que genera un numero aleatorio
+	 * */
+	private int generaAleatorio() {
+		return (int) (Math.random()*imagenes.size());
+	}
+	
 
 }

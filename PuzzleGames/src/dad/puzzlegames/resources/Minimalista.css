@@ -29,6 +29,20 @@
 	-fx-border-radius: 10px;
 }
 
+#resultadosLabel {
+	-fx-font-weight: bold;
+	-fx-text-fill:black;
+	-fx-effect: dropshadow(gaussian,darkgray,1,1,1,1) ;
+	-fx-font-size:100px;
+}
+#resultadoLabel{
+	-fx-font-weight: bold;
+	-fx-text-fill:white;
+	-fx-effect: dropshadow(gaussian,darkgray,1,1,1,1) ;
+	-fx-font-size:50px;
+	
+}
+
 .button {
 	-fx-background-color: black;
 	-fx-font-size: 15pt;
@@ -61,4 +75,5 @@
 .label{
 	-fx-font-weight: bold;
 	-fx-text-fill:black;
+	-fx-effect: dropshadow(gaussian,darkgray,1,1,1,1) ;
 }

@@ -1,6 +1,7 @@
 package dad.puzzlegames.controllers;
 
 import java.io.IOException;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -11,6 +12,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+
+/**
+ * @author Domingo Rodriguez
+ * @version 1.0
+ */
 
 public class MatchPuzzleController implements Initializable {
 

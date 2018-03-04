@@ -14,6 +14,10 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 
+/**
+ * @author Domingo Rodriguez
+ * @version 1.0
+ */
 public class MenuController implements Initializable {
 
 	@FXML

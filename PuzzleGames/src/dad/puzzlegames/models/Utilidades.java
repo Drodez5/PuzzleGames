@@ -18,9 +18,18 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 
+/**
+ * @author Domingo Rodriguez
+ * @version 1.0
+ */
+
+
+/**
+ * Clase Utilidades
+ * */
 public class Utilidades {
 
-	// DEVUELVE UN CONJUNTO DE IMGENES SELECCIONADO, DEPEDNIENDO DEL NUM DE RONDAS
+	// DEVUELVE UN CONJUNTO DE IMAGENES SELECCIONADO, DEPEDNIENDO DEL NUM DE RONDAS
 	public ArrayList<File> seleccionaImagen(String dir, int rondas) {
 		File directorio = new File(dir);
 		File[] archivos = directorio.listFiles();
@@ -53,12 +62,17 @@ public class Utilidades {
 
 	}
 
+	/**
+	 * Metodo cargarMatches
+	 * Este metodo permite cargar 
+	 * las parejas en un arraylist
+	 * */
 	public ArrayList<Image> cargaMatches() {
 
 		ArrayList<Image> imagenes = new ArrayList<>();
 
 		for (int i = 0; i <= 7; i++) {
-			Image imagen = new Image("/dad/puzzlegames/resources/matches/img" + i + ".gif"); // parametros add ,800,500,false,false
+			Image imagen = new Image("/dad/puzzlegames/resources/matches/img" + i + ".gif"); 
 			imagenes.add(imagen);
 
 		}
@@ -67,7 +81,13 @@ public class Utilidades {
 
 	}
 
-	// METODO PARA CONVERTIR A MINUTOS
+	/**
+	 * Metodo para convertir a minutos
+	 * 
+	 * @param num
+	 * Este metodo se encarga de convertir segundos, minutos
+	 * 
+	 * */
 	public String convertirAMinutos(int num) {
 		int hor, min, seg;
 		hor = num / 3600;
@@ -77,10 +97,17 @@ public class Utilidades {
 
 	}
 
-	// TROZEA LA IMAGEN (MODO FACIL)
+	/**
+	 * Metodo de trozearImagenes
+	 * 
+	 * Este metodo se encarga de trozear la imagen, 
+	 * segun la dificultad que le hayamos especificado
+	 * 
+	 * @param imagen,mode
+	 * */
 	public void trozeaImagenes(File imagen, Dificultad mode) throws IOException {
 		FileInputStream fis = new FileInputStream(imagen);
-		BufferedImage image = ImageIO.read(fis); // reading the image file
+		BufferedImage image = ImageIO.read(fis); 
 
 		// DETERMINAMOS EL NUMERO DE FILAS Y COLUMNAS, SEGUN EL MODO ESPECIFICADO
 
@@ -143,7 +170,15 @@ public class Utilidades {
 		System.out.println("Mini imagenes creadas con éxito.");
 	}
 
-	// OPCION NO DISPONIBLE
+
+	
+	/**
+	 * Opcion no disponible
+	 * Este metodo se encarga de mostrar
+	 * un cuadro de dialogo indicando que la
+	 *  opcion seleccionada no esta disponible
+	 *  @param Stage
+	 *  */
 	public void noDisponibleDialog(Stage appStage) {
 		Alert alert = new Alert(AlertType.INFORMATION);
 		alert.setTitle("No se encuentra disponible");
@@ -154,7 +189,14 @@ public class Utilidades {
 		alert.showAndWait();
 	}
 
-	// IMAGENES INSUFICIENTES
+	/**
+	 * Metodo de imagenes insuficientes
+	 * 
+	 * Este metodo se encarga de lanzar un cuadro de dialogo
+	 * informando al usuario de que no hay suficientes imagenes
+	 * para el numero de rondas que ha establecido
+	 * 
+	 * @param Stage*/
 	public void imagenesInsuficientesDialog(Stage appStage) {
 		Alert alert = new Alert(AlertType.ERROR);
 		alert.setTitle("Error");
@@ -165,8 +207,6 @@ public class Utilidades {
 		alert.initModality(Modality.APPLICATION_MODAL);
 		alert.showAndWait();
 		
-		
-
 	}
 	
 	

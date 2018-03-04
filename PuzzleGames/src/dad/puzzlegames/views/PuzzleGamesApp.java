@@ -1,10 +1,20 @@
 package dad.puzzlegames.views;
 
 import dad.puzzlegames.controllers.PuzzleGamesController;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
+/**
+ * @author Domingo Rodriguez
+ * @version 1.0
+ */
+
+/**
+ * Lanzador de la aplicacion
+ * */
 
 public class PuzzleGamesApp extends Application {
 
