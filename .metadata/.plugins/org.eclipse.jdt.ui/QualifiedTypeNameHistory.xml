@@ -43,4 +43,6 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="dad.puzzlegames.models.Dificultad"/>
 <fullyQualifiedTypeName name="javafx.scene.image.ImageView"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="dad.puzzlegames.controllers.MenuController"/>
 </qualifiedTypeNameHistroy>

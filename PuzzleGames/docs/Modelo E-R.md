@@ -31,3 +31,5 @@ La aplicación **PuzzleGames** utiliza un modelo que consta de tres tablas, cada
 **Rondas**, almacenará el número de rondas que ha elegido el jugador.
 
 **Tiempo**, almacenará el tiempo restante, en el que el jugador ha resuelto el puzzle.
+
+![](mockup/mer.JPG)
