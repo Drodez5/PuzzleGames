@@ -4,19 +4,26 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import dad.puzzlegames.models.ConexionBD;
 import dad.puzzlegames.models.Dificultad;
 import dad.puzzlegames.models.Jugador;
 import dad.puzzlegames.models.Modo;
+import dad.puzzlegames.models.Partida;
 import dad.puzzlegames.models.Utilidades;
 import dad.puzzlegames.views.PuzzleGamesApp;
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.beans.property.ListProperty;
+import javafx.beans.property.SimpleListProperty;
+import javafx.collections.FXCollections;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
@@ -27,6 +34,7 @@ import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.Dialog;
+import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -49,7 +57,7 @@ public class PuzzleGamesController implements Initializable {
 	private MatchPuzzleController controladorMatchPuzzle;
 	private SlidingPuzzleController controladorSlidingPuzzle;
 	private ResultadosController controladorResultados;
-	
+
 	private BorderPane vista;
 	private Stage appStage;
 
@@ -69,10 +77,11 @@ public class PuzzleGamesController implements Initializable {
 	private int clic = 0;
 	private int clic1 = -1;
 	private int clic2 = -1;
-	
-	
-	
-	private Image comodin,interrogation;
+	private ConexionBD conexion;
+
+	private ListProperty<Partida> listaPartidas;
+
+	private Image comodin, interrogation;
 
 	private FadeTransition transicionEntrada, transicionSalida;
 
@@ -83,7 +92,7 @@ public class PuzzleGamesController implements Initializable {
 
 	public static boolean cargaSplash = false;
 
-	public PuzzleGamesController() throws IOException {
+	public PuzzleGamesController() throws IOException, ClassNotFoundException, SQLException {
 
 		appStage = PuzzleGamesApp.getPrimaryStage();
 
@@ -94,6 +103,7 @@ public class PuzzleGamesController implements Initializable {
 		controladorMatchPuzzle = new MatchPuzzleController();
 		controladorSlidingPuzzle = new SlidingPuzzleController();
 		controladorResultados = new ResultadosController();
+		conexion = new ConexionBD();
 
 		vista = new BorderPane();
 		vista.setCenter(new ImageView("/dad/puzzlegames/resources/splashimage.jpg"));
@@ -115,6 +125,7 @@ public class PuzzleGamesController implements Initializable {
 	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+
 		interrogation = new Image("/dad/puzzlegames/resources/interrogation.jpg");
 		// INSTANCIAS E INICIALIZACIONES
 		audio = new AudioClip(getClass().getResource("/dad/puzzlegames/resources/openingIntro.mp3").toExternalForm());
@@ -123,8 +134,8 @@ public class PuzzleGamesController implements Initializable {
 		imagenes = new ArrayList<>();
 		imagenesMatch = util.cargaMatches();
 		imagenesPiezes = new ArrayList<>();
-		resultados= new ArrayList<>();
-		
+		resultados = new ArrayList<>();
+
 		audio.play();
 
 		controladorOpciones.getJuegoCombo().setOnAction(e -> {
@@ -153,6 +164,18 @@ public class PuzzleGamesController implements Initializable {
 
 		// CONTROLADOR MARCADOR
 		controladorMarcador.getVolverButton().setOnAction(e -> onAtrasButtonAction(e));
+		controladorMarcador.getConsultarButton().setOnAction(e -> onConsultarButton(e));
+		listaPartidas = new SimpleListProperty<>(this, "listaPartidas", FXCollections.observableArrayList());
+
+		controladorMarcador.getIdColumn().setCellValueFactory(v -> v.getValue().idProperty());
+		controladorMarcador.getNombreColumn().setCellValueFactory(v -> v.getValue().nombreProperty());
+		controladorMarcador.getRondasColumn().setCellValueFactory(v -> v.getValue().rondasProperty());
+		controladorMarcador.getTiempoColumn().setCellValueFactory(v -> v.getValue().tiempoProperty());
+		controladorMarcador.getDificultadColumn().setCellValueFactory(v -> v.getValue().dificultadProperty());
+
+		controladorMarcador.getTableScores().itemsProperty().bind(listaPartidas);
+
+		controladorMarcador.getTableScores().setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
 		// CONTROLADOR MATCH PUZZLE
 		controladorMatchPuzzle.getAbandonarButton().setOnAction(e -> onAbandonarButtonAction(e));
@@ -161,13 +184,13 @@ public class PuzzleGamesController implements Initializable {
 		// CONTROLADOR PUZZLE PIECES
 		controladorPuzzlePieces.getAbandonarButton().setOnAction(e -> onAbandonarButtonAction(e));
 		controladorPuzzlePieces.getSiguienteButton().setOnAction(e -> onTerminarButtonAction(e));
-		
+
 		// CONTROLADOR SLIDING PUZZLE
 		controladorSlidingPuzzle.getAbandonarButton().setOnAction(e -> onAbandonarButtonAction(e));
 		controladorSlidingPuzzle.getSiguienteButton().setOnAction(e -> onTerminarButtonAction(e));
-		
-		//CONTROLADOR RESULTADOS
-		controladorResultados.getContinuarButton().setOnAction(e-> volverAMenu());
+
+		// CONTROLADOR RESULTADOS
+		controladorResultados.getContinuarButton().setOnAction(e -> volverAMenu());
 
 		// BINDEOS
 		controladorOpciones.getContinuarButton().disableProperty()
@@ -175,16 +198,48 @@ public class PuzzleGamesController implements Initializable {
 		controladorOpciones.getContinuarButton().disableProperty()
 				.bind(controladorOpciones.getNombreText().textProperty().isEmpty());
 		controladorOpciones.getContinuarButton().disableProperty().bind(jugadorNuevo.directorioProperty().isEmpty());
-//		controladorMarcador.getGenerarInformeButton().disableProperty().bind(controladorMarcador.getTableScores().itemsProperty().isEqualTo(0));
+		controladorMarcador.getGenerarInformeButton().disableProperty().bind(listaPartidas.sizeProperty().isEqualTo(0));
+
+	}
+
+	private void onConsultarButton(ActionEvent e) {
+		if (controladorMarcador.getDificultadCombo().getValue().equals(Dificultad.MEDIA)
+				&& controladorMarcador.getJuegoCombo().getValue().equals(Modo.MATCH_PUZZLE)) {
+
+			Task<Void> tarea = new Task<Void>() {
+				
+				@Override
+				protected Void call() throws Exception {
+					listaPartidas.set(conexion.consultarUsuariosMatchPuzzle());
+					return null;
+				}
+			};
+			
+			new Thread(tarea).start();
+		} else if(controladorMarcador.getDificultadCombo().getValue().equals(Dificultad.FACIL)
+				&& controladorMarcador.getJuegoCombo().getValue().equals(Modo.PUZZLE_PIECES)) {
+			
+			Task<Void> tarea = new Task<Void>() {
+
+				@Override
+				protected Void call() throws Exception {
+					listaPartidas.set(conexion.consultarUsuariosPuzzlePiezes());
+					return null;
+				}
+			};
+			
+			new Thread(tarea).start();
+		} else {
+			util.noDisponibleDialog(appStage);
+		}
 
 	}
 
 	/*
 	 * Metodo de terminar
 	 * 
-	 * Este metodo muestra los resultados de la partida,
-	 * si la partida ha sido favorable mostrará un resultado 
-	 * y si no otro
+	 * Este metodo muestra los resultados de la partida, si la partida ha sido
+	 * favorable mostrará un resultado y si no otro
 	 * 
 	 * @param ActionEvent e
 	 * 
@@ -193,19 +248,18 @@ public class PuzzleGamesController implements Initializable {
 
 		tiempo.stop();
 		if (compruebaPuzzles() == true) {
-			System.out.println("La victoria es nuestra");
+		
 			vista.setCenter(controladorResultados.getVista());
 			controladorResultados.getResultImagen1().setImage(new Image("/dad/puzzlegames/resources/ok.png"));
 			controladorResultados.getResultadoLabel().setText("Victoria");
-			
+
 		} else {
-			
+
 			vista.setCenter(controladorResultados.getVista());
 			controladorResultados.getResultImagen1().setImage(new Image("/dad/puzzlegames/resources/fail.png"));
 			controladorResultados.getResultadoLabel().setText("Game Over");
-			
-			
-			System.out.println("La derrota yacerá sobre tu tumba");
+
+		
 		}
 
 	}
@@ -215,7 +269,7 @@ public class PuzzleGamesController implements Initializable {
 	 * 
 	 * Este metodo permite habilitar/deshabilitar el sonido
 	 * 
-	 * @param ActionEvent           
+	 * @param ActionEvent
 	 */
 	private void onSonidoButtonAction(ActionEvent e) {
 		if (audio.isPlaying()) {
@@ -234,6 +288,7 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo de abandonar
 	 * 
 	 * Este metodo permite abandonar la partida
+	 * 
 	 * @param ActionEvent
 	 */
 	private void onAbandonarButtonAction(ActionEvent e) {
@@ -258,6 +313,7 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo de Tema
 	 * 
 	 * Este metodo permite cambiar de tema la aplicacion
+	 * 
 	 * @param ActionEvent
 	 */
 	private void onTemaButtonAction(ActionEvent e) {
@@ -299,8 +355,7 @@ public class PuzzleGamesController implements Initializable {
 	}
 
 	/**
-	 * Metodo cargar SplashScreen
-	 * Este metodo se encarga de cargar el SplashScreen
+	 * Metodo cargar SplashScreen Este metodo se encarga de cargar el SplashScreen
 	 */
 
 	private void loadSplashScreen() throws IOException {
@@ -331,8 +386,8 @@ public class PuzzleGamesController implements Initializable {
 	/**
 	 * Metodo de jugar
 	 * 
-	 * Se encarga de seleccionar el modo de juego
-	 * y la dificultad para poder iniciar la partida
+	 * Se encarga de seleccionar el modo de juego y la dificultad para poder iniciar
+	 * la partida
 	 * 
 	 * @param ActionEvent
 	 */
@@ -373,9 +428,9 @@ public class PuzzleGamesController implements Initializable {
 				System.out.println("SLIDING PUZZLE");
 				this.sec = tiempoFacil;
 				cuentaAtras();
-				if(recolectaImagenes()==true) {
+				if (recolectaImagenes() == true) {
 					iniciarPartidaSlidingPuzzleFacil(jugadorNuevo);
-					
+
 				}
 
 				break;
@@ -449,21 +504,21 @@ public class PuzzleGamesController implements Initializable {
 		}
 
 	}
-/**
- * Metodo iniciar Partida Sliding Puzzle Facil
- * 
- * Se encarga de iniciar la partida del Sliding Puzzle
- * en la dificultad fácil
- * @param jugadorNuevo
- * */
+
+	/**
+	 * Metodo iniciar Partida Sliding Puzzle Facil
+	 * 
+	 * Se encarga de iniciar la partida del Sliding Puzzle en la dificultad fácil
+	 * 
+	 * @param jugadorNuevo
+	 */
 	private void iniciarPartidaSlidingPuzzleFacil(Jugador jugadorNuevo2) {
-		
+
 		controladorSlidingPuzzle.getJugadorLabel().setText(jugadorNuevo.getNombre());
 		controladorSlidingPuzzle.getRondasLabel().setText(rondaActual + "");
-		
-		
-		comodin= new Image("/dad/puzzlegames/resources/hole.png");
-		
+
+		comodin = new Image("/dad/puzzlegames/resources/hole.png");
+
 		try {
 			util.trozeaImagenes(imagenes.get(generaAleatorio()), Dificultad.FACIL);
 		} catch (IOException e) {
@@ -484,147 +539,147 @@ public class PuzzleGamesController implements Initializable {
 		controladorSlidingPuzzle.getImagen7Tab().setImage(comodin);
 		controladorSlidingPuzzle.getImagen8Tab().setImage(imagenesPiezes.get(7));
 		controladorSlidingPuzzle.getImagen9Tab().setImage(imagenesPiezes.get(8));
-		
-		clic=7;
-		
-		controladorSlidingPuzzle.getImagen1Tab().setOnMouseClicked(e->comprobarDespazamiento(1));
-		controladorSlidingPuzzle.getImagen2Tab().setOnMouseClicked(e->comprobarDespazamiento(2));
-		controladorSlidingPuzzle.getImagen3Tab().setOnMouseClicked(e->comprobarDespazamiento(3));
-		controladorSlidingPuzzle.getImagen4Tab().setOnMouseClicked(e->comprobarDespazamiento(4));
-		controladorSlidingPuzzle.getImagen5Tab().setOnMouseClicked(e->comprobarDespazamiento(5));
-		controladorSlidingPuzzle.getImagen6Tab().setOnMouseClicked(e->comprobarDespazamiento(6));
-		controladorSlidingPuzzle.getImagen7Tab().setOnMouseClicked(e->comprobarDespazamiento(7));
-		controladorSlidingPuzzle.getImagen8Tab().setOnMouseClicked(e->comprobarDespazamiento(8));
-		controladorSlidingPuzzle.getImagen9Tab().setOnMouseClicked(e->comprobarDespazamiento(9));
-		
+
+		clic = 7;
+
+		controladorSlidingPuzzle.getImagen1Tab().setOnMouseClicked(e -> comprobarDespazamiento(1));
+		controladorSlidingPuzzle.getImagen2Tab().setOnMouseClicked(e -> comprobarDespazamiento(2));
+		controladorSlidingPuzzle.getImagen3Tab().setOnMouseClicked(e -> comprobarDespazamiento(3));
+		controladorSlidingPuzzle.getImagen4Tab().setOnMouseClicked(e -> comprobarDespazamiento(4));
+		controladorSlidingPuzzle.getImagen5Tab().setOnMouseClicked(e -> comprobarDespazamiento(5));
+		controladorSlidingPuzzle.getImagen6Tab().setOnMouseClicked(e -> comprobarDespazamiento(6));
+		controladorSlidingPuzzle.getImagen7Tab().setOnMouseClicked(e -> comprobarDespazamiento(7));
+		controladorSlidingPuzzle.getImagen8Tab().setOnMouseClicked(e -> comprobarDespazamiento(8));
+		controladorSlidingPuzzle.getImagen9Tab().setOnMouseClicked(e -> comprobarDespazamiento(9));
+
 		vista.setCenter(controladorSlidingPuzzle.getVista());
-		
+
 	}
-	
+
 	/**
-	 * Comprobar desplazamientos
-	 * Este metodo se encarga de realizar
-	 *  los desplazamientos permitidos de las fichas
-	 *  @param desplazamiento
-	 *  */
+	 * Comprobar desplazamientos Este metodo se encarga de realizar los
+	 * desplazamientos permitidos de las fichas
+	 * 
+	 * @param desplazamiento
+	 */
 	private void comprobarDespazamiento(int desplazamiento) {
-		clic1=desplazamiento;
-		if(clic==7 && clic1==8) {
+		clic1 = desplazamiento;
+		if (clic == 7 && clic1 == 8) {
 			controladorSlidingPuzzle.getImagen8Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen7Tab().setImage(imagenesPiezes.get(7));
-			clic=8;
-		} else if(clic==8 && clic1==7) {
+			clic = 8;
+		} else if (clic == 8 && clic1 == 7) {
 			controladorSlidingPuzzle.getImagen7Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen8Tab().setImage(imagenesPiezes.get(7));
-			clic=7;		
-		} else if(clic==7 && clic1==4) {
+			clic = 7;
+		} else if (clic == 7 && clic1 == 4) {
 			controladorSlidingPuzzle.getImagen4Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen7Tab().setImage(imagenesPiezes.get(3));
-			clic=4;
-		} else if(clic==4 && clic1==7) {
+			clic = 4;
+		} else if (clic == 4 && clic1 == 7) {
 			controladorSlidingPuzzle.getImagen7Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen4Tab().setImage(imagenesPiezes.get(3));
-			clic=7;	
-		} else if(clic==8 && clic1==9) {
+			clic = 7;
+		} else if (clic == 8 && clic1 == 9) {
 			controladorSlidingPuzzle.getImagen9Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen8Tab().setImage(imagenesPiezes.get(8));
-			clic=9;
-			
-		} else if(clic==9 && clic1==8) {
+			clic = 9;
+
+		} else if (clic == 9 && clic1 == 8) {
 			controladorSlidingPuzzle.getImagen8Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen9Tab().setImage(imagenesPiezes.get(8));
-			clic=8;
-			
-		} else if(clic==9 && clic1==6) {
+			clic = 8;
+
+		} else if (clic == 9 && clic1 == 6) {
 			controladorSlidingPuzzle.getImagen6Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen9Tab().setImage(imagenesPiezes.get(5));
-			clic=6;
-			
-		} else if(clic==6 && clic1==9) {
+			clic = 6;
+
+		} else if (clic == 6 && clic1 == 9) {
 			controladorSlidingPuzzle.getImagen9Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen6Tab().setImage(imagenesPiezes.get(5));
-			clic=9;
-			
-		} else if(clic==6 && clic1==3) {
+			clic = 9;
+
+		} else if (clic == 6 && clic1 == 3) {
 			controladorSlidingPuzzle.getImagen3Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen6Tab().setImage(imagenesPiezes.get(2));
-			clic=3;
-		} else if(clic==3 && clic1==6) {
+			clic = 3;
+		} else if (clic == 3 && clic1 == 6) {
 			controladorSlidingPuzzle.getImagen6Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen3Tab().setImage(imagenesPiezes.get(2));
-			clic=6;
-			
-		} else if(clic==3 && clic1==2) {
+			clic = 6;
+
+		} else if (clic == 3 && clic1 == 2) {
 			controladorSlidingPuzzle.getImagen2Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen3Tab().setImage(imagenesPiezes.get(1));
-			clic=2;
-			
-		} else if(clic==2 && clic1==3) {
+			clic = 2;
+
+		} else if (clic == 2 && clic1 == 3) {
 			controladorSlidingPuzzle.getImagen3Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen2Tab().setImage(imagenesPiezes.get(1));
-			clic=3;
-		} else if(clic==2 && clic1==1) {
+			clic = 3;
+		} else if (clic == 2 && clic1 == 1) {
 			controladorSlidingPuzzle.getImagen1Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen2Tab().setImage(imagenesPiezes.get(0));
-			clic=1;	
-		} else if(clic==1 && clic1==2) {
+			clic = 1;
+		} else if (clic == 1 && clic1 == 2) {
 			controladorSlidingPuzzle.getImagen2Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen1Tab().setImage(imagenesPiezes.get(0));
-			clic=2;
-			
-		}else if(clic==1 && clic1==4) {
+			clic = 2;
+
+		} else if (clic == 1 && clic1 == 4) {
 			controladorSlidingPuzzle.getImagen4Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen1Tab().setImage(imagenesPiezes.get(3));
-			clic=4;
-			
-		} else if(clic==4 && clic1==1) {
+			clic = 4;
+
+		} else if (clic == 4 && clic1 == 1) {
 			controladorSlidingPuzzle.getImagen1Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen4Tab().setImage(imagenesPiezes.get(3));
-			clic=1;
-			
-		} else if(clic==2 && clic1==5) {
+			clic = 1;
+
+		} else if (clic == 2 && clic1 == 5) {
 			controladorSlidingPuzzle.getImagen5Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen2Tab().setImage(imagenesPiezes.get(1));
-			clic=5;
-		} else if(clic==5 && clic1==2) {
+			clic = 5;
+		} else if (clic == 5 && clic1 == 2) {
 			controladorSlidingPuzzle.getImagen2Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen5Tab().setImage(imagenesPiezes.get(1));
-			clic=2;
-		} else if(clic==5 && clic1==4) {
+			clic = 2;
+		} else if (clic == 5 && clic1 == 4) {
 			controladorSlidingPuzzle.getImagen4Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen5Tab().setImage(imagenesPiezes.get(3));
-			clic=4;
-		} else if(clic==4 && clic1==5) {
+			clic = 4;
+		} else if (clic == 4 && clic1 == 5) {
 			controladorSlidingPuzzle.getImagen5Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen4Tab().setImage(imagenesPiezes.get(3));
-			clic=5;
-		} else if(clic==5 && clic1==6) {
+			clic = 5;
+		} else if (clic == 5 && clic1 == 6) {
 			controladorSlidingPuzzle.getImagen6Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen5Tab().setImage(imagenesPiezes.get(4));
-			clic=6;
-		} else if(clic==6 && clic1==5) {
+			clic = 6;
+		} else if (clic == 6 && clic1 == 5) {
 			controladorSlidingPuzzle.getImagen6Tab().setImage(imagenesPiezes.get(5));
 			controladorSlidingPuzzle.getImagen5Tab().setImage(comodin);
-			clic=5;
-			
-		} else if(clic==5 && clic1==8) {
+			clic = 5;
+
+		} else if (clic == 5 && clic1 == 8) {
 			controladorSlidingPuzzle.getImagen8Tab().setImage(comodin);
 			controladorSlidingPuzzle.getImagen5Tab().setImage(imagenesPiezes.get(7));
-			clic=8;	
-		} else if (clic==8 && clic1==5) {
+			clic = 8;
+		} else if (clic == 8 && clic1 == 5) {
 			controladorSlidingPuzzle.getImagen8Tab().setImage(imagenesPiezes.get(4));
 			controladorSlidingPuzzle.getImagen5Tab().setImage(comodin);
-			clic=5;
-			
+			clic = 5;
+
 		}
-		
+
 	}
 
 	/**
 	 * Metodo de iniciar partida
 	 * 
-	 * Este metodo inicia una nueva partida
-	 * en el modo de juego MatchPuzzle, dificultad Media
+	 * Este metodo inicia una nueva partida en el modo de juego MatchPuzzle,
+	 * dificultad Media
 	 * 
 	 * @param jugadorNuevo
 	 */
@@ -632,8 +687,6 @@ public class PuzzleGamesController implements Initializable {
 
 		controladorMatchPuzzle.getNamePlayerLabel().setText(jugadorNuevo.getNombre());
 		controladorMatchPuzzle.getRoundLabel().setText(rondaActual + "");
-
-		
 
 		controladorMatchPuzzle.getImagen1().setOnMouseClicked(e -> {
 			transicionEntrada = abrirTransicion(controladorMatchPuzzle.getImagen1());
@@ -706,13 +759,13 @@ public class PuzzleGamesController implements Initializable {
 			transicionEntrada.setOnFinished(a -> {
 				transicionSalida.play();
 				controladorMatchPuzzle.getImagen4().setImage(imagenesMatch.get(2));
-				clic++;
-				compruebaClic(3);
 
 			});
 
 			transicionSalida.setOnFinished(a -> {
 				controladorMatchPuzzle.getImagen4().setImage(interrogation);
+				clic++;
+				compruebaClic(3);
 			});
 
 		});
@@ -992,8 +1045,9 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo de volver
 	 * 
 	 * Se encarga de llamar al metodo volver a menu
+	 * 
 	 * @param ActionEvent
-	 *            
+	 * 
 	 */
 	private void onAtrasButtonAction(ActionEvent e) {
 		volverAMenu();
@@ -1003,7 +1057,7 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo para visualizar el marcador
 	 * 
 	 * @param ActionEvent
-	 *            
+	 * 
 	 */
 	private void onMarcadorButtonAction(ActionEvent e) {
 		vista.setCenter(controladorMarcador.getVista());
@@ -1013,7 +1067,7 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo para salir
 	 * 
 	 * @param ActionEvent
-	 *            
+	 * 
 	 */
 	private void onSalirButtonAction(ActionEvent e) {
 		Alert alertExit = new Alert(AlertType.CONFIRMATION);
@@ -1034,7 +1088,7 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo de acerca de
 	 * 
 	 * @param ActionEvent
-	 *            
+	 * 
 	 */
 	private void onAcercaDeButtonAction(ActionEvent e) {
 		Dialog<Void> dialog = new Dialog<>();
@@ -1053,7 +1107,7 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo cambiar vista opciones
 	 * 
 	 * @param ActionEvent
-	 *            
+	 * 
 	 */
 	private void onOpcionesPartidaButtonAction(ActionEvent e) {
 		vista.setCenter(controladorOpciones.getVista());
@@ -1069,7 +1123,7 @@ public class PuzzleGamesController implements Initializable {
 	private void iniciarPartidaPuzzlePiecesFacil(Jugador jugadorNuevo) {
 
 		try {
-			
+
 			util.trozeaImagenes(imagenes.get(generaAleatorio()), Dificultad.FACIL);
 
 			for (int i = 0; i < 9; i++) {
@@ -1091,7 +1145,7 @@ public class PuzzleGamesController implements Initializable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("ronda actual en inicar partida vale" + rondaActual);
+
 		this.sec = tiempoFacil;
 		cuentaAtras();
 		controladorPuzzlePieces.setNombreLabel(jugadorNuevo.getNombre());
@@ -1153,8 +1207,10 @@ public class PuzzleGamesController implements Initializable {
 				controladorSlidingPuzzle.getTiempoLabel().setText(util.convertirAMinutos(sec));
 
 				if (0 == sec) {
-					System.out.println("Game Over");
+
 					tiempo.stop();
+					controladorResultados.getResultadoLabel().setText("Game Over");
+					vista.setCenter(controladorResultados.getVista());
 
 				}
 
@@ -1169,7 +1225,7 @@ public class PuzzleGamesController implements Initializable {
 	 * Metodo que comprueba y registra el clic
 	 * 
 	 * @param cod
-	 *            
+	 * 
 	 */
 	private void compruebaClic(int cod) {
 
@@ -1263,25 +1319,81 @@ public class PuzzleGamesController implements Initializable {
 	}
 
 	private boolean compruebaPuzzles() {
-		
-		System.out.println(resultados.size());
+
 		boolean puzzleCorrecto = false;
 
 		if (jugadorNuevo.getModo() == Modo.MATCH_PUZZLE) {
-			if(resultados.size()>8) {
-				
-				puzzleCorrecto=true;
-				
+			if (resultados.size() >= 8) {
+				Alert alert = new Alert(AlertType.CONFIRMATION);
+				alert.setTitle("Felicidades");
+				alert.setHeaderText("¿Te gustaría almacenar tu puntuación?");
+				alert.setContentText("Tu puntuación se enviará al servidor.");
+				alert.initOwner(appStage);
+				alert.initModality(Modality.APPLICATION_MODAL);
+
+				Optional<ButtonType> result = alert.showAndWait();
+				if (result.get() == ButtonType.OK) {
+					Task<Void> tarea = new Task<Void>() {
+
+						@Override
+						protected Void call() throws Exception {
+							conexion.insertarUsuarioMatchPuzzle(jugadorNuevo.getNombre(), jugadorNuevo.getRondas(),
+									controladorMatchPuzzle.getTimeLabel().getText(), jugadorNuevo.getDificultad());
+							return null;
+						}
+					};
+					new Thread(tarea).start();
+
+				} else {
+					alert.close();
+				}
+
+				puzzleCorrecto = true;
+
 			} else {
-				
-				puzzleCorrecto=false;
+
+				puzzleCorrecto = false;
 			}
 
 		} else if (jugadorNuevo.getModo() == Modo.PUZZLE_PIECES) {
 
-			// if() {
-			//
-			// }
+			if (controladorPuzzlePieces.getPieza1().equals("\\piezas\\img0.jpg")
+					&& controladorPuzzlePieces.getPieza2().equals("\\piezas\\img1.jpg")
+					&& controladorPuzzlePieces.getPieza3().equals("\\piezas\\img2.jpg")
+					&& controladorPuzzlePieces.getPieza4().equals("\\piezas\\img3.jpg")
+					&& controladorPuzzlePieces.getPieza5().equals("\\piezas\\img4.jpg")
+					&& controladorPuzzlePieces.getPieza6().equals("\\piezas\\img5.jpg")
+					&& controladorPuzzlePieces.getPieza7().equals("\\piezas\\img6.jpg")
+					&& controladorPuzzlePieces.getPieza8().equals("\\piezas\\img7.jpg")
+					&& controladorPuzzlePieces.getPieza9().equals("\\piezas\\img8.jpg")) {
+				
+				
+				Alert alert = new Alert(AlertType.CONFIRMATION);
+				alert.setTitle("Felicidades");
+				alert.setHeaderText("¿Te gustaría almacenar tu puntuación?");
+				alert.setContentText("Tu puntuación se enviará al servidor.");
+				alert.initOwner(appStage);
+				alert.initModality(Modality.APPLICATION_MODAL);
+
+				Optional<ButtonType> result = alert.showAndWait();
+				if (result.get() == ButtonType.OK) {
+					Task<Void> tarea = new Task<Void>() {
+
+						@Override
+						protected Void call() throws Exception {
+							conexion.insertarUsuarioPuzzlePieces(jugadorNuevo.getNombre(), jugadorNuevo.getRondas(),
+									controladorMatchPuzzle.getTimeLabel().getText(), jugadorNuevo.getDificultad());
+							return null;
+						}
+					};
+					new Thread(tarea).start();
+				}
+
+				puzzleCorrecto = true;
+
+			} else {
+				puzzleCorrecto = false;
+			}
 
 		} else {
 
@@ -1292,10 +1404,10 @@ public class PuzzleGamesController implements Initializable {
 	}
 
 	/**
-	 * Metodo que inicia la transicion
-	 *  de la imagen enviada por parametro
-	 *  @param imagen
-	 *  */
+	 * Metodo que inicia la transicion de la imagen enviada por parametro
+	 * 
+	 * @param imagen
+	 */
 	private FadeTransition abrirTransicion(ImageView imagen) {
 		transicionEntrada = new FadeTransition(Duration.seconds(0.5), imagen);
 		transicionEntrada.setFromValue(1);
@@ -1304,12 +1416,12 @@ public class PuzzleGamesController implements Initializable {
 
 		return transicionEntrada;
 	}
-	
+
 	/**
-	 * Metodo que finaliza la transicion 
-	 * de la imagen enviada por parametro
+	 * Metodo que finaliza la transicion de la imagen enviada por parametro
 	 * 
-	 * @param imagen*/
+	 * @param imagen
+	 */
 
 	private FadeTransition cerrarTransicion(ImageView imagen) {
 		transicionSalida = new FadeTransition(Duration.seconds(0.5), imagen);
@@ -1319,24 +1431,27 @@ public class PuzzleGamesController implements Initializable {
 		return transicionSalida;
 
 	}
-	
+
 	/**
-	 * Metodo de reseteo
-	 * resetea todas las opciones del juego
-	 * */
-	
+	 * Metodo de reseteo resetea todas las opciones del juego
+	 */
+
 	private void reset() {
-		clic=0;
-		clic1=-1;
-		clic2=-1;
-		sec=0;
+		clic = 0;
+		clic1 = -1;
+		clic2 = -1;
+		sec = 0;
 		imagenesPiezes.clear();
+		resultados.clear();
+
+		File piezas = new File("\\piezas");
+		piezas.delete();
 		jugadorNuevo.setDificultad("");
 		jugadorNuevo.setDirectorio("");
 		jugadorNuevo.setModo(Modo.PUZZLE_PIECES);
 		jugadorNuevo.setNombre("");
 		jugadorNuevo.setRondas(1);
-		
+
 		controladorMatchPuzzle.getImagen1().setImage(interrogation);
 		controladorMatchPuzzle.getImagen2().setImage(interrogation);
 		controladorMatchPuzzle.getImagen3().setImage(interrogation);
@@ -1353,7 +1468,7 @@ public class PuzzleGamesController implements Initializable {
 		controladorMatchPuzzle.getImagen14().setImage(interrogation);
 		controladorMatchPuzzle.getImagen15().setImage(interrogation);
 		controladorMatchPuzzle.getImagen16().setImage(interrogation);
-		
+
 		controladorPuzzlePieces.getImagen1Tab().imageProperty().set(null);
 		controladorPuzzlePieces.getImagen2Tab().imageProperty().set(null);
 		controladorPuzzlePieces.getImagen3Tab().imageProperty().set(null);
@@ -1363,7 +1478,7 @@ public class PuzzleGamesController implements Initializable {
 		controladorPuzzlePieces.getImagen7Tab().imageProperty().set(null);
 		controladorPuzzlePieces.getImagen8Tab().imageProperty().set(null);
 		controladorPuzzlePieces.getImagen9Tab().imageProperty().set(null);
-		
+
 		controladorPuzzlePieces.getImagen1Ficha().imageProperty().set(null);
 		controladorPuzzlePieces.getImagen2Ficha().imageProperty().set(null);
 		controladorPuzzlePieces.getImagen3Ficha().imageProperty().set(null);
@@ -1373,7 +1488,7 @@ public class PuzzleGamesController implements Initializable {
 		controladorPuzzlePieces.getImagen7Ficha().imageProperty().set(null);
 		controladorPuzzlePieces.getImagen8Ficha().imageProperty().set(null);
 		controladorPuzzlePieces.getImagen9Ficha().imageProperty().set(null);
-		
+
 		controladorSlidingPuzzle.getImagen1Tab().imageProperty().set(null);
 		controladorSlidingPuzzle.getImagen2Tab().imageProperty().set(null);
 		controladorSlidingPuzzle.getImagen3Tab().imageProperty().set(null);
@@ -1383,21 +1498,20 @@ public class PuzzleGamesController implements Initializable {
 		controladorSlidingPuzzle.getImagen7Tab().imageProperty().set(null);
 		controladorSlidingPuzzle.getImagen8Tab().imageProperty().set(null);
 		controladorSlidingPuzzle.getImagen9Tab().imageProperty().set(null);
-		
+
 		controladorOpciones.getNombreText().setText("");
 		controladorOpciones.getDificultadCombo().setValue(Dificultad.FACIL);
 		controladorOpciones.getRondasCombo().setValue(1);
 		controladorOpciones.getJuegoCombo().setValue(Modo.PUZZLE_PIECES);
 		controladorOpciones.getDirectorioLabel().setText("<<Directorio>>");
-		
+
 	}
-	
+
 	/**
 	 * Metodo que genera un numero aleatorio
-	 * */
+	 */
 	private int generaAleatorio() {
-		return (int) (Math.random()*imagenes.size());
+		return (int) (Math.random() * imagenes.size());
 	}
-	
 
 }

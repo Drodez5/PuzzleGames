@@ -6,6 +6,8 @@ import java.util.ResourceBundle;
 
 import dad.puzzlegames.models.Dificultad;
 import dad.puzzlegames.models.Modo;
+import dad.puzzlegames.models.Partida;
+import javafx.beans.property.ListProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,17 +19,15 @@ import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 
 public class MarcadorController implements Initializable {
-	
+
 	@FXML
 	private BorderPane vista;
-	
 
-    @FXML
-    private Label tituloLabel;
+	@FXML
+	private Label tituloLabel;
 
-    @FXML
-    private Label subTituloLabel;
-
+	@FXML
+	private Label subTituloLabel;
 
 	@FXML
 	private ComboBox<Dificultad> dificultadCombo;
@@ -39,31 +39,30 @@ public class MarcadorController implements Initializable {
 	private Button consultarButton;
 
 	@FXML
+	private Button generarInformeButton;
+
+	@FXML
 	private Button volverButton;
 
 	@FXML
-	private TableView<?> tableScores;
+	private TableView<Partida> tableScores;
 
 	@FXML
-	private TableColumn<?, ?> puestoColumn;
+	private TableColumn<Partida, Number> idColumn;
 
 	@FXML
-	private TableColumn<?, ?> idColumn;
-	
-	@FXML
-    private Button generarInformeButton;
+	private TableColumn<Partida, String> nombreColumn;
 
 	@FXML
-	private TableColumn<?, ?> nombreColumn;
+	private TableColumn<Partida, Number> rondasColumn;
 
 	@FXML
-	private TableColumn<?, ?> modoColumn;
+	private TableColumn<Partida, String> tiempoColumn;
 
 	@FXML
-	private TableColumn<?, ?> tiempoColumn;
+	private TableColumn<Partida, String> dificultadColumn;
 
-	@FXML
-	private TableColumn<?, ?> puntuacionColumn;
+	private ListProperty<Partida> listaPartidas;
 
 	public MarcadorController() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/dad/puzzlegames/views/MarcadorView.fxml"));
@@ -74,16 +73,22 @@ public class MarcadorController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+
 		juegoCombo.getItems().setAll(Modo.values());
 		juegoCombo.setValue(Modo.PUZZLE_PIECES);
-		
+
 		dificultadCombo.getItems().setAll(Dificultad.values());
 		dificultadCombo.setValue(Dificultad.FACIL);
 
 	}
 
+	public ListProperty<Partida> getListaPartidas() {
+		return listaPartidas;
+	}
 
+	public void setListaPartidas(ListProperty<Partida> listaPartidas) {
+		this.listaPartidas = listaPartidas;
+	}
 
 	public BorderPane getVista() {
 		return vista;
@@ -109,31 +114,29 @@ public class MarcadorController implements Initializable {
 		this.juegoCombo = juegoCombo;
 	}
 
-	public TableView<?> getTableScores() {
-		return tableScores;
+	public Label getTituloLabel() {
+		return tituloLabel;
 	}
 
-	public void setTableScores(TableView<?> tableScores) {
-		this.tableScores = tableScores;
+	public void setTituloLabel(Label tituloLabel) {
+		this.tituloLabel = tituloLabel;
 	}
 
-	public TableColumn<?, ?> getPuestoColumn() {
-		return puestoColumn;
+	public Label getSubTituloLabel() {
+		return subTituloLabel;
 	}
 
-	public void setPuestoColumn(TableColumn<?, ?> puestoColumn) {
-		this.puestoColumn = puestoColumn;
+	public void setSubTituloLabel(Label subTituloLabel) {
+		this.subTituloLabel = subTituloLabel;
 	}
 
-	public TableColumn<?, ?> getIdColumn() {
-		return idColumn;
+	public Button getConsultarButton() {
+		return consultarButton;
 	}
 
-	public void setIdColumn(TableColumn<?, ?> idColumn) {
-		this.idColumn = idColumn;
+	public void setConsultarButton(Button consultarButton) {
+		this.consultarButton = consultarButton;
 	}
-	
-	
 
 	public Button getGenerarInformeButton() {
 		return generarInformeButton;
@@ -143,52 +146,60 @@ public class MarcadorController implements Initializable {
 		this.generarInformeButton = generarInformeButton;
 	}
 
-	public TableColumn<?, ?> getNombreColumn() {
-		return nombreColumn;
-	}
-
-	public void setNombreColumn(TableColumn<?, ?> nombreColumn) {
-		this.nombreColumn = nombreColumn;
-	}
-
-	public TableColumn<?, ?> getModoColumn() {
-		return modoColumn;
-	}
-
-	public void setModoColumn(TableColumn<?, ?> modoColumn) {
-		this.modoColumn = modoColumn;
-	}
-
-	public TableColumn<?, ?> getTiempoColumn() {
-		return tiempoColumn;
-	}
-
-	public void setTiempoColumn(TableColumn<?, ?> tiempoColumn) {
-		this.tiempoColumn = tiempoColumn;
-	}
-
-	public TableColumn<?, ?> getPuntuacionColumn() {
-		return puntuacionColumn;
-	}
-
-	public void setPuntuacionColumn(TableColumn<?, ?> puntuacionColumn) {
-		this.puntuacionColumn = puntuacionColumn;
-	}
-
-	public void setConsultarButton(Button consultarButton) {
-		this.consultarButton = consultarButton;
+	public Button getVolverButton() {
+		return volverButton;
 	}
 
 	public void setVolverButton(Button volverButton) {
 		this.volverButton = volverButton;
 	}
 
-	public Button getConsultarButton() {
-		return consultarButton;
+	public TableView<Partida> getTableScores() {
+		return tableScores;
 	}
 
-	public Button getVolverButton() {
-		return volverButton;
+	public void setTableScores(TableView<Partida> tableScores) {
+		this.tableScores = tableScores;
+	}
+
+	public TableColumn<Partida, Number> getIdColumn() {
+		return idColumn;
+	}
+
+	public void setIdColumn(TableColumn<Partida, Number> idColumn) {
+		this.idColumn = idColumn;
+	}
+
+	public TableColumn<Partida, String> getNombreColumn() {
+		return nombreColumn;
+	}
+
+	public void setNombreColumn(TableColumn<Partida, String> nombreColumn) {
+		this.nombreColumn = nombreColumn;
+	}
+
+	public TableColumn<Partida, Number> getRondasColumn() {
+		return rondasColumn;
+	}
+
+	public void setRondasColumn(TableColumn<Partida, Number> rondasColumn) {
+		this.rondasColumn = rondasColumn;
+	}
+
+	public TableColumn<Partida, String> getTiempoColumn() {
+		return tiempoColumn;
+	}
+
+	public void setTiempoColumn(TableColumn<Partida, String> tiempoColumn) {
+		this.tiempoColumn = tiempoColumn;
+	}
+
+	public TableColumn<Partida, String> getDificultadColumn() {
+		return dificultadColumn;
+	}
+
+	public void setDificultadColumn(TableColumn<Partida, String> dificultadColumn) {
+		this.dificultadColumn = dificultadColumn;
 	}
 
 }

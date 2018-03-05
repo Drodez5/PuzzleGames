@@ -1,13 +1,11 @@
 package dad.puzzlegames.controllers;
 
-
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 
 import java.util.ResourceBundle;
-
-
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -99,196 +97,214 @@ public class PuzzlePiecesController implements Initializable {
 
 	@FXML
 	private ImageView imagen9Ficha;
-	
+
 	Image img;
+
+	String pieza1 = "", pieza2 = "", pieza3 = "", pieza4 = "", pieza5 = "", pieza6 = "", pieza7 = "", pieza8 = "",
+			pieza9 = "";
+	File prueba;
 
 	public PuzzlePiecesController() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/dad/puzzlegames/views/PuzzlePiecesView.fxml"));
 		loader.setController(this);
 		loader.load();
 	}
-	
-	//TABLERO
-	@FXML
-	 private void handleDragOverTab(DragEvent event) {
-		if(event.getDragboard().hasImage()) {
-		event.acceptTransferModes(TransferMode.ANY);
-		}
-
-		event.consume();
-	 }
-	
-	  
-	
-    @FXML
-    private void handleDragDroppedImg1Tab(DragEvent event) throws FileNotFoundException {
-    	img= event.getDragboard().getImage();
-    	imagen1Tab.setImage(img);
-    	event.consume();
-    }
-    
-    @FXML
-    private void handleDragDroppedImg2Tab(DragEvent event) {
-    	img= event.getDragboard().getImage();
-    	imagen2Tab.setImage(img);
-    	event.consume();
-
-    }
-    @FXML
-    private void handleDragDroppedImg3Tab(DragEvent event) {
-    	 img= event.getDragboard().getImage();
-    	imagen3Tab.setImage(img);
-    	event.consume();
-
-    }
-
-    @FXML
-    private void handleDragDroppedImg4Tab(DragEvent event) {
-    	 img= event.getDragboard().getImage();
-    	imagen4Tab.setImage(img);
-    	event.consume();
-
-    }
-
-    @FXML
-    private void handleDragDroppedImg5Tab(DragEvent event) {
-    	img= event.getDragboard().getImage();
-    	imagen5Tab.setImage(img);
-    	event.consume();
-
-    }
-
-    @FXML
-    private void handleDragDroppedImg6Tab(DragEvent event) {
-    	img= event.getDragboard().getImage();
-    	imagen6Tab.setImage(img);
-    	event.consume();
-
-    }
-
-    @FXML
-    private void handleDragDroppedImg7Tab(DragEvent event) {
-    	img= event.getDragboard().getImage();
-    	imagen7Tab.setImage(img);
-    	event.consume();
-
-    }
-
-    @FXML
-    private void handleDragDroppedImg8Tab(DragEvent event) {
-     img= event.getDragboard().getImage();
-    	imagen8Tab.setImage(img);
-    	event.consume();
-
-    }
-
-    @FXML
-    private void handleDragDroppedImg9Tab(DragEvent event) {
-    	 img= event.getDragboard().getImage();
-    	imagen9Tab.setImage(img);
-    	event.consume();
-
-    }
-
-   
-  
-    
-    // FICHAS
-    @FXML
-    private void handleDragDetectionImg1Ficha(MouseEvent event) {
-    	Dragboard db = imagen1Ficha.startDragAndDrop(TransferMode.MOVE);
-    	ClipboardContent cb = new ClipboardContent();
-    	cb.putImage(imagen1Ficha.getImage());
-    	db.setContent(cb);
-    	event.consume();
-
-    }
-    
-    @FXML
-    private void handleDragDetectionImg2Ficha(MouseEvent event) {
-    	Dragboard db = imagen2Ficha.startDragAndDrop(TransferMode.MOVE);
-    	ClipboardContent cb = new ClipboardContent();
-    	cb.putImage(imagen2Ficha.getImage());
-    	db.setContent(cb);
-    	event.consume();
-
-    }
-    
-    @FXML
-    private void handleDragDetectionImg3Ficha(MouseEvent event) {
-    	Dragboard db = imagen3Ficha.startDragAndDrop(TransferMode.MOVE);
-    	ClipboardContent cb = new ClipboardContent();
-    	cb.putImage(imagen3Ficha.getImage());
-    	db.setContent(cb);
-    	event.consume();
-
-    }
-
-    @FXML
-    private void handleDragDetectionImg4Ficha(MouseEvent event) {
-    	Dragboard db = imagen4Ficha.startDragAndDrop(TransferMode.MOVE);
-    	ClipboardContent cb = new ClipboardContent();
-    	cb.putImage(imagen4Ficha.getImage());
-    	db.setContent(cb);
-    	event.consume();
-
-    }
-
-    @FXML
-    private void handleDragDetectionImg5Ficha(MouseEvent event) {
-    	Dragboard db = imagen5Ficha.startDragAndDrop(TransferMode.MOVE);
-    	ClipboardContent cb = new ClipboardContent();
-    	cb.putImage(imagen5Ficha.getImage());
-    	db.setContent(cb);
-    	event.consume();
-
-    }
-
-    @FXML
-    private void handleDragDetectionImg6Ficha(MouseEvent event) {
-    	Dragboard db = imagen6Ficha.startDragAndDrop(TransferMode.MOVE);
-    	ClipboardContent cb = new ClipboardContent();
-    	cb.putImage(imagen6Ficha.getImage());
-    	db.setContent(cb);
-    	event.consume();
-
-    }
-
-    @FXML
-    private void handleDragDetectionImg7Ficha(MouseEvent event) {
-    	Dragboard db = imagen7Ficha.startDragAndDrop(TransferMode.MOVE);
-    	ClipboardContent cb = new ClipboardContent();
-    	cb.putImage(imagen7Ficha.getImage());
-    	db.setContent(cb);
-    	event.consume();
-
-    }
-
-    @FXML
-    private void handleDragDetectionImg8Ficha(MouseEvent event) {
-    	Dragboard db = imagen8Ficha.startDragAndDrop(TransferMode.MOVE);
-    	ClipboardContent cb = new ClipboardContent();
-    	cb.putImage(imagen8Ficha.getImage());
-    	db.setContent(cb);
-    	event.consume();
-
-    }
-
-    @FXML
-    private void handleDragDetectionImg9Ficha(MouseEvent event) {
-    	Dragboard db = imagen9Ficha.startDragAndDrop(TransferMode.MOVE);
-    	ClipboardContent cb = new ClipboardContent();
-    	cb.putImage(imagen9Ficha.getImage());
-    	db.setContent(cb);
-    	event.consume();
-
-    }
-    
-    
-  
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+
+	}
+
+	// TABLERO
+	@FXML
+	private void handleDragOverTab(DragEvent event) {
+		if (event.getDragboard().hasImage()) {
+			event.acceptTransferModes(TransferMode.ANY);
+		}
+
+		event.consume();
+	}
+
+	@FXML
+	private void handleDragDroppedImg1Tab(DragEvent event) throws FileNotFoundException {
+		pieza1 = event.getDragboard().getString();
+		img = event.getDragboard().getImage();
+		imagen1Tab.setImage(img);
+
+		event.consume();
+	}
+
+	@FXML
+	private void handleDragDroppedImg2Tab(DragEvent event) {
+		pieza2 = event.getDragboard().getString();
+		img = event.getDragboard().getImage();
+		imagen2Tab.setImage(img);
+
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDroppedImg3Tab(DragEvent event) {
+		pieza3 = event.getDragboard().getString();
+		img = event.getDragboard().getImage();
+		imagen3Tab.setImage(img);
+
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDroppedImg4Tab(DragEvent event) {
+		pieza4 = event.getDragboard().getString();
+		img = event.getDragboard().getImage();
+		imagen4Tab.setImage(img);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDroppedImg5Tab(DragEvent event) {
+		pieza5 = event.getDragboard().getString();
+		img = event.getDragboard().getImage();
+		imagen5Tab.setImage(img);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDroppedImg6Tab(DragEvent event) {
+		pieza6 = event.getDragboard().getString();
+		img = event.getDragboard().getImage();
+		imagen6Tab.setImage(img);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDroppedImg7Tab(DragEvent event) {
+		pieza7 = event.getDragboard().getString();
+		img = event.getDragboard().getImage();
+		imagen7Tab.setImage(img);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDroppedImg8Tab(DragEvent event) {
+		pieza8 = event.getDragboard().getString();
+		img = event.getDragboard().getImage();
+		imagen8Tab.setImage(img);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDroppedImg9Tab(DragEvent event) {
+		pieza9 = event.getDragboard().getString();
+		img = event.getDragboard().getImage();
+		imagen9Tab.setImage(img);
+		event.consume();
+
+	}
+
+	// FICHAS
+	@FXML
+	private void handleDragDetectionImg1Ficha(MouseEvent event) {
+		Dragboard db = imagen1Ficha.startDragAndDrop(TransferMode.MOVE);
+		ClipboardContent cb = new ClipboardContent();
+		cb.putString("\\piezas\\img0.jpg");
+		cb.putImage(imagen1Ficha.getImage());
+		db.setContent(cb);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDetectionImg2Ficha(MouseEvent event) {
+		Dragboard db = imagen2Ficha.startDragAndDrop(TransferMode.MOVE);
+		ClipboardContent cb = new ClipboardContent();
+		cb.putString("\\piezas\\img1.jpg");
+		cb.putImage(imagen2Ficha.getImage());
+		db.setContent(cb);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDetectionImg3Ficha(MouseEvent event) {
+		Dragboard db = imagen3Ficha.startDragAndDrop(TransferMode.MOVE);
+		ClipboardContent cb = new ClipboardContent();
+		cb.putString("\\piezas\\img2.jpg");
+		cb.putImage(imagen3Ficha.getImage());
+		db.setContent(cb);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDetectionImg4Ficha(MouseEvent event) {
+		Dragboard db = imagen4Ficha.startDragAndDrop(TransferMode.MOVE);
+		ClipboardContent cb = new ClipboardContent();
+		cb.putString("\\piezas\\img3.jpg");
+		cb.putImage(imagen4Ficha.getImage());
+		db.setContent(cb);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDetectionImg5Ficha(MouseEvent event) {
+		Dragboard db = imagen5Ficha.startDragAndDrop(TransferMode.MOVE);
+		ClipboardContent cb = new ClipboardContent();
+		cb.putString("\\piezas\\img4.jpg");
+		cb.putImage(imagen5Ficha.getImage());
+		db.setContent(cb);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDetectionImg6Ficha(MouseEvent event) {
+		Dragboard db = imagen6Ficha.startDragAndDrop(TransferMode.MOVE);
+		ClipboardContent cb = new ClipboardContent();
+		cb.putString("\\piezas\\img5.jpg");
+		cb.putImage(imagen6Ficha.getImage());
+		db.setContent(cb);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDetectionImg7Ficha(MouseEvent event) {
+		Dragboard db = imagen7Ficha.startDragAndDrop(TransferMode.MOVE);
+		ClipboardContent cb = new ClipboardContent();
+		cb.putString("\\piezas\\img6.jpg");
+		cb.putImage(imagen7Ficha.getImage());
+		db.setContent(cb);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDetectionImg8Ficha(MouseEvent event) {
+		Dragboard db = imagen8Ficha.startDragAndDrop(TransferMode.MOVE);
+		ClipboardContent cb = new ClipboardContent();
+		cb.putString("\\piezas\\img7.jpg");
+		cb.putImage(imagen8Ficha.getImage());
+		db.setContent(cb);
+		event.consume();
+
+	}
+
+	@FXML
+	private void handleDragDetectionImg9Ficha(MouseEvent event) {
+		Dragboard db = imagen9Ficha.startDragAndDrop(TransferMode.MOVE);
+		ClipboardContent cb = new ClipboardContent();
+		cb.putString("\\piezas\\img8.jpg");
+		cb.putImage(imagen9Ficha.getImage());
+		db.setContent(cb);
+		event.consume();
 
 	}
 
@@ -499,7 +515,85 @@ public class PuzzlePiecesController implements Initializable {
 	public void setTiempoLabel(Label tiempoLabel) {
 		this.tiempoLabel = tiempoLabel;
 	}
-	
-	
+
+	public String getPieza1() {
+		return pieza1;
+	}
+
+	public void setPieza1(String pieza1) {
+		this.pieza1 = pieza1;
+	}
+
+	public String getPieza2() {
+		return pieza2;
+	}
+
+	public void setPieza2(String pieza2) {
+		this.pieza2 = pieza2;
+	}
+
+	public String getPieza3() {
+		return pieza3;
+	}
+
+	public void setPieza3(String pieza3) {
+		this.pieza3 = pieza3;
+	}
+
+	public String getPieza4() {
+		return pieza4;
+	}
+
+	public void setPieza4(String pieza4) {
+		this.pieza4 = pieza4;
+	}
+
+	public String getPieza5() {
+		return pieza5;
+	}
+
+	public void setPieza5(String pieza5) {
+		this.pieza5 = pieza5;
+	}
+
+	public String getPieza6() {
+		return pieza6;
+	}
+
+	public void setPieza6(String pieza6) {
+		this.pieza6 = pieza6;
+	}
+
+	public String getPieza7() {
+		return pieza7;
+	}
+
+	public void setPieza7(String pieza7) {
+		this.pieza7 = pieza7;
+	}
+
+	public String getPieza8() {
+		return pieza8;
+	}
+
+	public void setPieza8(String pieza8) {
+		this.pieza8 = pieza8;
+	}
+
+	public String getPieza9() {
+		return pieza9;
+	}
+
+	public void setPieza9(String pieza9) {
+		this.pieza9 = pieza9;
+	}
+
+	public File getPrueba() {
+		return prueba;
+	}
+
+	public void setPrueba(File prueba) {
+		this.prueba = prueba;
+	}
 
 }

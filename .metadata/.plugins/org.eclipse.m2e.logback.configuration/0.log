@@ -3550,3 +3550,558 @@
 2018-03-04 02:56:18,066 [Worker-290] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
 2018-03-04 02:56:18,066 [Worker-290] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-03-04 02:56:18,075 [Worker-290] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 03:03:38,899 [Worker-294] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 03:03:38,906 [Worker-294] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 03:03:38,911 [Worker-294] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 03:03:38,919 [Worker-294] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 03:12:19,796 [Worker-294] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 03:12:19,802 [Worker-294] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 03:12:19,803 [Worker-294] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 03:12:19,813 [Worker-294] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 03:15:18,436 [Worker-300] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 03:15:18,444 [Worker-300] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 03:15:18,448 [Worker-300] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 03:15:18,456 [Worker-300] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 14:19:39,905 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-03-04 14:24:15,999 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 14:24:16,006 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 14:24:16,008 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 14:24:16,014 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 16:35:35,820 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:35:35,827 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 16:35:35,828 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:35:35,833 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 16:37:10,405 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:37:10,413 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 16:37:10,415 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:37:10,420 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 16:38:08,626 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:38:08,632 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 16:38:08,634 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:38:08,646 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 16:42:14,151 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:42:14,157 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 16:42:14,158 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:42:14,167 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 16:44:21,227 [Worker-69] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:44:21,234 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 16:44:21,239 [Worker-69] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:44:21,246 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 16:51:55,602 [Worker-66] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:51:55,608 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 16:51:55,609 [Worker-66] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:51:55,620 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 16:52:31,029 [Worker-68] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:52:31,037 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 16:52:31,041 [Worker-68] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:52:31,050 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 16:54:27,115 [Worker-69] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:54:27,120 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 16:54:27,123 [Worker-69] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 16:54:27,131 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:02:35,824 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:02:35,830 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:02:35,835 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:02:35,843 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:03:29,178 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:03:29,186 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:03:29,188 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:03:29,201 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:04:39,904 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:04:39,912 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:04:39,916 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:04:39,925 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:15:32,583 [Worker-74] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:15:32,589 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:15:32,590 [Worker-74] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:15:32,603 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:29:41,402 [Worker-87] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:29:41,412 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:29:41,416 [Worker-87] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:29:41,424 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:30:16,233 [Worker-87] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:30:16,238 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:30:16,239 [Worker-87] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:30:16,248 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:30:35,360 [Worker-90] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:30:35,369 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:30:35,374 [Worker-90] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:30:35,382 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:32:55,955 [Worker-88] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:32:55,960 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:32:55,963 [Worker-88] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:32:55,970 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:34:14,856 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:34:14,868 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:34:14,873 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:34:14,883 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:34:31,204 [Worker-85] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:34:31,213 [Worker-85] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:34:31,214 [Worker-85] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:34:31,226 [Worker-85] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:35:22,023 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:35:22,032 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:35:22,036 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:35:22,044 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:41:54,219 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:41:54,227 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:41:54,228 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:41:54,241 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:45:21,535 [Worker-95] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:45:21,545 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:45:21,549 [Worker-95] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:45:21,558 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:46:16,713 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:46:16,719 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:46:16,721 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:46:16,732 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 17:47:22,596 [Worker-98] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:47:22,608 [Worker-98] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 17:47:22,616 [Worker-98] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 17:47:22,625 [Worker-98] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:01:57,250 [Worker-97] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:01:57,259 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:01:57,260 [Worker-97] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:01:57,268 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:03:31,418 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:03:31,429 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:03:31,434 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:03:31,474 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:04:48,619 [Worker-100] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:04:48,624 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:04:48,627 [Worker-100] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:04:48,636 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:15:40,992 [Worker-97] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:15:41,003 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:15:41,008 [Worker-97] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:15:41,018 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:15:49,680 [Worker-97] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:15:49,685 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:15:49,687 [Worker-97] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:15:49,696 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:18:23,404 [Worker-104] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:18:23,414 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:18:23,420 [Worker-104] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:18:23,430 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:29:15,987 [Worker-100] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:29:15,997 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:29:15,998 [Worker-100] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:29:16,010 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:30:35,804 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:30:35,813 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:30:35,820 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:30:35,828 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:31:31,869 [Worker-97] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:31:31,874 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:31:31,875 [Worker-97] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:31:31,883 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:31:59,367 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:31:59,371 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:31:59,377 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:31:59,384 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:41:15,122 [Worker-110] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:41:15,128 [Worker-110] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:41:15,129 [Worker-110] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:41:15,139 [Worker-110] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:44:40,942 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:44:40,950 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:44:40,954 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:44:40,963 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:46:01,875 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:46:01,881 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:46:01,882 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:46:01,890 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:47:59,107 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:47:59,116 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:47:59,121 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:47:59,130 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 18:51:14,018 [Worker-114] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:51:14,025 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 18:51:14,026 [Worker-114] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 18:51:14,035 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 19:11:04,215 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 19:11:04,222 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 19:11:04,227 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 19:11:04,236 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 19:23:55,018 [Worker-123] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 19:23:55,024 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 19:23:55,025 [Worker-123] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 19:23:55,034 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 19:37:07,511 [Worker-133] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 19:37:07,518 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 19:37:07,524 [Worker-133] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 19:37:07,532 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 20:15:24,173 [Worker-145] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 20:15:24,185 [Worker-145] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 20:15:24,186 [Worker-145] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 20:15:24,201 [Worker-145] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 20:15:25,282 [Worker-149] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 20:15:25,292 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 20:15:25,300 [Worker-149] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 20:15:25,310 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 20:20:28,809 [Worker-152] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 20:20:28,815 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 20:20:28,818 [Worker-152] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 20:20:28,828 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 20:21:57,886 [Worker-151] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 20:21:57,895 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 20:21:57,900 [Worker-151] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 20:21:57,908 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 20:26:12,331 [Worker-157] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 20:26:12,337 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 20:26:12,338 [Worker-157] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 20:26:12,347 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 21:44:53,580 [Worker-177] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:44:53,586 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 21:44:53,592 [Worker-177] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:44:53,601 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 21:53:17,270 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:53:17,275 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 21:53:17,276 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:53:17,284 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 21:57:37,834 [Worker-180] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:57:37,845 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 21:57:37,851 [Worker-180] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:57:37,860 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 21:57:58,425 [Worker-183] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:57:58,432 [Worker-183] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 21:57:58,432 [Worker-183] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:57:58,443 [Worker-183] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 21:58:56,857 [Worker-178] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:58:56,865 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 21:58:56,870 [Worker-178] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:58:56,877 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 21:59:20,137 [Worker-183] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:59:20,142 [Worker-183] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 21:59:20,143 [Worker-183] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:59:20,152 [Worker-183] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 21:59:22,552 [Worker-180] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:59:22,563 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 21:59:22,569 [Worker-180] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 21:59:22,581 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:01:44,848 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:01:44,855 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:01:44,857 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:01:44,868 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:01:56,356 [Worker-182] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:01:56,365 [Worker-182] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:01:56,369 [Worker-182] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:01:56,378 [Worker-182] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:02:07,247 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:02:07,253 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:02:07,254 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:02:07,264 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:04:04,783 [Worker-180] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: PuzzleGames:PuzzleGames:0.0.1 @ C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\pom.xml.
+2018-03-04 22:04:05,340 [Worker-180] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.pom
+2018-03-04 22:04:05,500 [Worker-180] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.pom
+2018-03-04 22:04:05,574 [Worker-180] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.jar
+2018-03-04 22:04:06,388 [Worker-180] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.jar
+2018-03-04 22:04:07,740 [Worker-180] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:04:07,750 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:04:07,757 [Worker-180] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:04:07,762 [Worker-180] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:04:11,843 [Worker-186] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:04:11,851 [Worker-186] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:04:11,857 [Worker-186] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:04:11,866 [Worker-186] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:04:15,036 [Worker-185] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2018-03-04 22:04:15,460 [Worker-185] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: PuzzleGames:PuzzleGames:0.0.1 @ C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\pom.xml.
+2018-03-04 22:04:15,651 [Worker-185] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /PuzzleGames/src
+2018-03-04 22:04:15,656 [Worker-185] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /PuzzleGames/src/test/java because it overlaps with /PuzzleGames/src
+2018-03-04 22:04:15,898 [Worker-185] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2018-03-04 22:04:17,550 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:04:17,562 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:04:17,569 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:04:17,581 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:08:50,990 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:08:51,000 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:08:51,004 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:08:51,012 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:11:55,483 [Worker-200] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:11:55,493 [Worker-200] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:11:55,497 [Worker-200] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:11:55,506 [Worker-200] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:12:55,674 [Worker-198] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:12:55,688 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:12:55,695 [Worker-198] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:12:55,705 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:13:10,723 [Worker-202] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:13:10,734 [Worker-202] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:13:10,739 [Worker-202] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:13:10,751 [Worker-202] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:16:12,057 [Worker-201] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:16:12,070 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:16:12,076 [Worker-201] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:16:12,087 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:18:24,829 [Worker-198] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:18:24,835 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:18:24,840 [Worker-198] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:18:24,848 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:18:27,074 [Worker-202] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:18:27,084 [Worker-202] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:18:27,089 [Worker-202] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:18:27,098 [Worker-202] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:18:45,531 [Worker-200] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:18:45,540 [Worker-200] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:18:45,545 [Worker-200] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:18:45,810 [Worker-200] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:19:04,557 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:19:04,568 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:19:04,573 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:19:04,582 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:19:22,420 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:19:22,428 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:19:22,433 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:19:22,440 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:19:46,710 [Worker-201] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:19:46,720 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:19:46,726 [Worker-201] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:19:46,735 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:20:24,525 [Worker-188] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:20:24,534 [Worker-188] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:20:24,539 [Worker-188] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:20:24,549 [Worker-188] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:27:01,844 [Worker-205] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:27:01,860 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:27:01,866 [Worker-205] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:27:01,876 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:27:27,820 [Worker-205] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:27:27,828 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:27:27,834 [Worker-205] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:27:27,841 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:32:15,025 [Worker-207] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:32:15,035 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:32:15,040 [Worker-207] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:32:15,049 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:32:52,655 [Worker-208] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:32:52,665 [Worker-208] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:32:52,670 [Worker-208] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:32:52,679 [Worker-208] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:33:01,001 [Worker-208] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:33:01,010 [Worker-208] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:33:01,015 [Worker-208] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:33:01,024 [Worker-208] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:33:17,981 [Worker-205] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:33:17,993 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:33:17,999 [Worker-205] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:33:18,008 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:34:01,738 [Worker-201] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:34:01,747 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:34:01,751 [Worker-201] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:34:01,761 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:35:59,811 [Worker-208] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:35:59,820 [Worker-208] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:35:59,824 [Worker-208] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:35:59,833 [Worker-208] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:40:52,922 [Worker-209] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:40:52,930 [Worker-209] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:40:52,934 [Worker-209] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:40:52,941 [Worker-209] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:46:54,659 [Worker-213] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:46:54,669 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:46:54,674 [Worker-213] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:46:54,683 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:47:13,982 [Worker-212] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:47:13,990 [Worker-212] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:47:13,995 [Worker-212] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:47:14,004 [Worker-212] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:52:01,791 [Worker-212] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:52:01,798 [Worker-212] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:52:01,802 [Worker-212] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:52:01,812 [Worker-212] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:52:06,105 [Worker-213] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:52:06,117 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:52:06,123 [Worker-213] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:52:06,134 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:52:28,264 [Worker-210] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:52:28,274 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:52:28,278 [Worker-210] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:52:28,288 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:53:49,191 [Worker-208] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:53:49,202 [Worker-208] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:53:49,207 [Worker-208] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:53:49,216 [Worker-208] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:54:53,556 [Worker-204] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:54:53,566 [Worker-204] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:54:53,571 [Worker-204] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:54:53,579 [Worker-204] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:56:17,532 [Worker-212] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:56:17,541 [Worker-212] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:56:17,545 [Worker-212] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:56:17,554 [Worker-212] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 22:59:30,061 [Worker-210] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:59:30,070 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 22:59:30,074 [Worker-210] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 22:59:30,083 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:01:49,329 [Worker-216] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:01:49,338 [Worker-216] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:01:49,343 [Worker-216] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:01:49,354 [Worker-216] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:03:29,475 [Worker-217] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:03:29,485 [Worker-217] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:03:29,491 [Worker-217] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:03:29,499 [Worker-217] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:08:04,665 [Worker-218] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:08:04,677 [Worker-218] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:08:04,682 [Worker-218] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:08:04,693 [Worker-218] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:08:10,805 [Worker-218] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:08:10,814 [Worker-218] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:08:10,819 [Worker-218] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:08:10,829 [Worker-218] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:08:26,824 [Worker-216] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:08:26,836 [Worker-216] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:08:26,841 [Worker-216] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:08:26,851 [Worker-216] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:17:02,112 [Worker-222] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:17:02,122 [Worker-222] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:17:02,127 [Worker-222] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:17:02,136 [Worker-222] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:20:13,805 [Worker-224] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:20:13,815 [Worker-224] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:20:13,819 [Worker-224] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:20:13,828 [Worker-224] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:22:03,087 [Worker-223] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:22:03,095 [Worker-223] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:22:03,100 [Worker-223] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:22:03,111 [Worker-223] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:22:22,815 [Worker-223] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:22:22,828 [Worker-223] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:22:22,833 [Worker-223] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:22:22,843 [Worker-223] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:23:48,253 [Worker-213] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:23:48,261 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:23:48,266 [Worker-213] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:23:48,274 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:24:50,269 [Worker-220] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:24:50,279 [Worker-220] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:24:50,285 [Worker-220] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:24:50,294 [Worker-220] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:26:25,063 [Worker-227] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:26:25,073 [Worker-227] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:26:25,079 [Worker-227] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:26:25,088 [Worker-227] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-04 23:28:19,591 [Worker-213] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:28:19,603 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-04 23:28:19,609 [Worker-213] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-04 23:28:19,622 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 00:00:15,944 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-03-05 00:06:33,252 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-03-05 00:08:11,828 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: PuzzleGames:PuzzleGames:0.0.1 @ C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\pom.xml.
+2018-03-05 00:08:12,547 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:08:12,554 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 00:08:12,556 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:08:12,561 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 00:17:39,998 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:17:40,006 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 00:17:40,008 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:17:40,017 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 00:17:59,225 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:17:59,232 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 00:17:59,234 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:17:59,243 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 00:20:22,256 [Worker-7] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/zenjava/javafx-maven-plugin/8.6.0/javafx-maven-plugin-8.6.0.jar
+2018-03-05 00:20:22,460 [Worker-7] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/zenjava/javafx-maven-plugin/8.6.0/javafx-maven-plugin-8.6.0.jar
+2018-03-05 00:20:22,993 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: PuzzleGames:PuzzleGames:0.0.1 @ C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\pom.xml.
+2018-03-05 00:20:23,180 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:20:23,189 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 00:20:23,191 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:20:23,201 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 00:23:11,379 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: PuzzleGames:PuzzleGames:0.0.1 @ C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\pom.xml.
+2018-03-05 00:23:11,547 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:23:11,554 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 00:23:11,559 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:23:11,568 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 00:23:56,219 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2018-03-05 00:24:41,659 [Worker-7] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames
+2018-03-05 00:24:41,664 [Worker-7] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2018-03-05 00:24:45,592 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:24:45,602 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 00:24:45,607 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:24:45,617 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 00:24:55,969 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2018-03-05 00:25:27,190 [Worker-23] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames
+2018-03-05 00:25:27,190 [Worker-23] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2018-03-05 00:26:00,138 [Worker-7] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames
+2018-03-05 00:26:00,144 [Worker-7] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2018-03-05 00:26:01,768 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:26:01,776 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 00:26:01,785 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:26:01,800 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 00:26:06,288 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2018-03-05 00:28:46,663 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2018-03-05 00:28:53,762 [Worker-25] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames
+2018-03-05 00:28:53,766 [Worker-25] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2018-03-05 00:33:27,917 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:33:27,937 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 00:33:27,944 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:33:27,957 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 00:42:53,494 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:42:53,520 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 00:42:53,530 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:42:53,542 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 00:43:36,389 [Worker-24] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames
+2018-03-05 00:43:36,389 [Worker-24] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2018-03-05 00:43:39,802 [Worker-36] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:43:39,817 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 00:43:39,822 [Worker-36] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:43:39,828 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 00:43:46,424 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2018-03-05 00:43:53,596 [Worker-37] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames
+2018-03-05 00:43:53,597 [Worker-37] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2018-03-05 00:44:54,907 [Worker-36] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:44:55,002 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 00:44:55,010 [Worker-36] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:44:55,022 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 00:58:29,725 [Worker-41] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames
+2018-03-05 00:58:29,726 [Worker-41] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2018-03-05 00:58:32,138 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:58:32,162 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 00:58:32,167 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 00:58:32,175 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 01:00:28,057 [Worker-45] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: PuzzleGames:PuzzleGames:0.0.1 @ C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\pom.xml.
+2018-03-05 01:00:28,676 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:00:28,682 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 01:00:28,687 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:00:28,696 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 01:00:33,050 [Worker-43] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames
+2018-03-05 01:00:33,051 [Worker-43] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2018-03-05 01:00:52,185 [Worker-38] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames
+2018-03-05 01:00:52,190 [Worker-38] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2018-03-05 01:00:53,957 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:00:53,964 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 01:00:53,971 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:00:54,188 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 01:03:47,084 [Worker-40] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: PuzzleGames:PuzzleGames:0.0.1 @ C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\pom.xml.
+2018-03-05 01:03:47,405 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:03:47,416 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 01:03:47,422 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:03:47,433 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 01:03:57,742 [Worker-49] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2018-03-05 01:03:58,101 [Worker-49] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: PuzzleGames:PuzzleGames:0.0.1 @ C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\pom.xml.
+2018-03-05 01:03:58,228 [Worker-49] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /PuzzleGames/src
+2018-03-05 01:03:58,232 [Worker-49] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /PuzzleGames/src/test/java because it overlaps with /PuzzleGames/src
+2018-03-05 01:03:58,571 [Worker-49] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2018-03-05 01:04:00,312 [Worker-52] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:04:00,318 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 01:04:00,324 [Worker-52] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:04:00,333 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 01:04:37,073 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2018-03-05 01:04:45,593 [Worker-50] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames
+2018-03-05 01:04:45,593 [Worker-50] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2018-03-05 01:04:47,212 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:04:47,221 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 01:04:47,226 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:04:47,235 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 01:05:07,946 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2018-03-05 01:05:54,080 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2018-03-05 01:06:12,742 [Worker-51] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames
+2018-03-05 01:06:12,748 [Worker-51] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2018-03-05 01:06:36,767 [Worker-48] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:06:36,783 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 01:06:36,791 [Worker-48] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:06:36,808 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources
+2018-03-05 01:07:56,695 [Worker-50] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:07:56,703 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\main\resources
+2018-03-05 01:07:56,708 [Worker-50] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-05 01:07:56,716 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\DOMYPC\Desktop\PuzzleGames\PuzzleGames\src\test\resources

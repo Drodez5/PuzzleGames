@@ -2,25 +2,25 @@ CREATE TABLE puzzle_pieces (
 id INT NOT NULL AUTO_INCREMENT,
 nombre VARCHAR(255) NOT NULL,
 rondas INT,
-tiempo INT,
+tiempo CHAR(5),
 dificultad VARCHAR(255),
 PRIMARY KEY (id)
-)
+);
 
 CREATE TABLE match_puzzle (
 id INT NOT NULL AUTO_INCREMENT,
 nombre VARCHAR(255) NOT NULL,
 rondas INT,
-tiempo INT,
+tiempo CHAR(5),
 dificultad VARCHAR(255),
 PRIMARY KEY (id)
-)
+);
 
 CREATE TABLE sliding_puzzle (
 id INT NOT NULL AUTO_INCREMENT,
 nombre VARCHAR(255) NOT NULL,
 rondas INT,
-tiempo INT,
+tiempo CHAR(5),
 dificultad VARCHAR(255),
 PRIMARY KEY (id)
 )

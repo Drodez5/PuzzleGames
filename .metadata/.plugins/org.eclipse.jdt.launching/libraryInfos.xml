@@ -19,4 +19,23 @@
 <entry path="C:\Desarrollo\jdk\otros\lib\endorsed"/>
 </endorsedDirs>
 </libraryInfo>
+<libraryInfo home="C:\Desarrollo\jdk" version="1.8.0_161">
+<bootpath>
+<entry path="C:\Desarrollo\jdk\jre\lib\resources.jar"/>
+<entry path="C:\Desarrollo\jdk\jre\lib\rt.jar"/>
+<entry path="C:\Desarrollo\jdk\jre\lib\sunrsasign.jar"/>
+<entry path="C:\Desarrollo\jdk\jre\lib\jsse.jar"/>
+<entry path="C:\Desarrollo\jdk\jre\lib\jce.jar"/>
+<entry path="C:\Desarrollo\jdk\jre\lib\charsets.jar"/>
+<entry path="C:\Desarrollo\jdk\jre\lib\jfr.jar"/>
+<entry path="C:\Desarrollo\jdk\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Desarrollo\jdk\jre\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Desarrollo\jdk\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
 </libraryInfos>

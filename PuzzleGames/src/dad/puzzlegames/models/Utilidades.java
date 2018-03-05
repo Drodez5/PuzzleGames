@@ -157,7 +157,7 @@ public class Utilidades {
 				gr.dispose();
 			}
 		}
-		System.out.println("Recorte realizado con éxito");
+	
 
 		File piezas = new File("\\piezas");
 		piezas.mkdirs();
@@ -167,7 +167,7 @@ public class Utilidades {
 			ImageIO.write(imgs[i], "jpg", new File("\\piezas\\img" + i + ".jpg"));
 
 		}
-		System.out.println("Mini imagenes creadas con éxito.");
+	
 	}
 
 
